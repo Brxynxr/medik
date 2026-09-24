@@ -19,6 +19,12 @@ function initDropzone() {
 
     if (!dropzone || !fileInput) return;
 
+    dropzone.addEventListener("click", (e) => {
+        if (e.target !== fileInput) {
+            fileInput.click();
+        }
+    });
+
     ["dragenter", "dragover"].forEach(eventName => {
         dropzone.addEventListener(eventName, (e) => {
             e.preventDefault();
@@ -473,24 +479,24 @@ function handleStreamEvent(event) {
     const pagesLabel = document.getElementById("pages-processed-label");
 
     if (event.tipo === "inicio") {
-        if (statusText) statusText.textContent = `Calculado SHA-256 (${event.pdf_hash.substring(0, 10)}...). Total: ${event.total_paginas} páginas.`;
+        if (statusText) statusText.textContent = `Documento identificado (ID: ${event.pdf_hash.substring(0, 8)}...). Total: ${event.total_paginas} páginas.`;
         if (progressBar) progressBar.style.width = "15%";
         initPageGrid(event.total_paginas);
-        appendTerminal(`> Hash SHA-256: ${event.pdf_hash}`);
-        appendTerminal(`> Total páginas detectadas: ${event.total_paginas}`);
+        appendTerminal(`> Documento cargado: ${event.pdf_hash.substring(0, 12)}...`);
+        appendTerminal(`> Total de páginas a procesar: ${event.total_paginas}`);
     } else if (event.tipo === "pagina") {
         updatePageBlock(event.numero_pagina, event.carril);
-        if (statusText) statusText.textContent = `Página ${event.numero_pagina} clasificada como '${event.carril}' (${event.duracion_ms.toFixed(1)} ms)`;
+        if (statusText) statusText.textContent = `Analizando página ${event.numero_pagina} de ${event.total_paginas}...`;
         if (pagesLabel) pagesLabel.textContent = `${event.paginas_completadas} / ${event.total_paginas}`;
         
         const pct = Math.min(85, Math.floor((event.paginas_completadas / event.total_paginas) * 80) + 15);
         if (progressBar) progressBar.style.width = `${pct}%`;
-        appendTerminal(`> Pág ${event.numero_pagina}: ${event.carril} (${event.duracion_ms.toFixed(1)} ms)`);
+        appendTerminal(`> Página ${event.numero_pagina} analizada correctamente`);
     } else if (event.tipo === "completado") {
         stopTimer();
         if (progressBar) progressBar.style.width = "100%";
-        if (statusText) statusText.textContent = "Procesamiento completado con éxito. Redirigiendo...";
-        appendTerminal(`> Dictamen consolidado en ${event.duracion_total_ms.toFixed(1)} ms. Caché: ${event.nivel_cache}`);
+        if (statusText) statusText.textContent = "¡Análisis completado con éxito! Abriendo expediente...";
+        appendTerminal(`> Proceso completado exitosamente en ${(event.duracion_total_ms / 1000).toFixed(2)} s`);
         setTimeout(() => {
             window.location.href = `/resultados/${event.pdf_hash}`;
         }, 600);

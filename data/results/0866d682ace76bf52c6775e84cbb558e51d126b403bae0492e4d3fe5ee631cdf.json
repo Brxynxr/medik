@@ -3,7 +3,7 @@
   "pipeline_version": "2.2",
   "status": "complete",
   "nivel_cache": "none",
-  "duracion_total_ms": 4294.61,
+  "duracion_total_ms": 12705.47,
   "paginas_totales": 1,
   "paginas_completadas": 1,
   "paginas_pendientes": [],
@@ -13,51 +13,51 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 4181.74,
+      "duracion_ms": 12592.03,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": [
         {
           "evidence_id": "ev_p1_ai_001",
           "page": 1,
-          "text": "NIT: 800.221.993-1",
+          "text": "FECHA: 15/04/2026",
           "bbox": [
-            116.0,
-            117.0,
-            332.0,
-            335.0
+            72.0,
+            150.0,
+            300.0,
+            170.0
           ],
           "source": "visual_ai",
-          "evidence_score": 0.99,
-          "kwic_snippet": "NIT: 800.221.993-1"
+          "evidence_score": 0.88,
+          "kwic_snippet": "FECHA: 15/04/2026"
         },
         {
           "evidence_id": "ev_p1_ai_002",
           "page": 1,
-          "text": "FECHA: 22/09/2026",
+          "text": "NIT: 900543210-8",
           "bbox": [
-            161.0,
-            333.0,
-            227.0,
-            532.0
+            72.0,
+            180.0,
+            300.0,
+            200.0
           ],
           "source": "visual_ai",
-          "evidence_score": 0.99,
-          "kwic_snippet": "Fecha: 22/09/2026"
+          "evidence_score": 0.88,
+          "kwic_snippet": "NIT: 900543210-8"
         },
         {
           "evidence_id": "ev_p1_ai_003",
           "page": 1,
-          "text": "TOTAL: 52.500",
+          "text": "TOTAL: $ 9.579.500 COP",
           "bbox": [
-            643.0,
-            417.0,
-            668.0,
-            650.0
+            72.0,
+            210.0,
+            300.0,
+            230.0
           ],
           "source": "visual_ai",
-          "evidence_score": 0.99,
-          "kwic_snippet": "TOTAL PAGADO: $ 52.500 COP"
+          "evidence_score": 0.88,
+          "kwic_snippet": "TOTAL: $ 9.579.500 COP"
         }
       ]
     }
@@ -65,100 +65,100 @@
   "hallazgos": [
     {
       "parametro": "fecha",
-      "valor": "22/09/2026",
-      "confianza": 0.99,
-      "metodo": "visual_ai",
-      "evidencias": [
-        {
-          "evidence_id": "ev_p1_ai_002",
-          "page": 1,
-          "text": "FECHA: 22/09/2026",
-          "bbox": [
-            161.0,
-            333.0,
-            227.0,
-            532.0
-          ],
-          "source": "visual_ai",
-          "evidence_score": 0.99,
-          "kwic_snippet": "Fecha: 22/09/2026"
-        }
-      ],
-      "valor_normalizado": "2026-09-22",
-      "formato_detectado": "ISO-8601",
-      "tipo_entidad": "fecha",
-      "divisa": null,
-      "kwic_context": "Fecha: 22/09/2026"
-    },
-    {
-      "parametro": "nit",
-      "valor": "800.221.993-1",
-      "confianza": 0.99,
+      "valor": "15/04/2026",
+      "confianza": 0.88,
       "metodo": "visual_ai",
       "evidencias": [
         {
           "evidence_id": "ev_p1_ai_001",
           "page": 1,
-          "text": "NIT: 800.221.993-1",
+          "text": "FECHA: 15/04/2026",
           "bbox": [
-            116.0,
-            117.0,
-            332.0,
-            335.0
+            72.0,
+            150.0,
+            300.0,
+            170.0
           ],
           "source": "visual_ai",
-          "evidence_score": 0.99,
-          "kwic_snippet": "NIT: 800.221.993-1"
+          "evidence_score": 0.88,
+          "kwic_snippet": "FECHA: 15/04/2026"
         }
       ],
-      "valor_normalizado": "800221993-1",
+      "valor_normalizado": "2026-04-15",
+      "formato_detectado": "ISO-8601",
+      "tipo_entidad": "fecha",
+      "divisa": null,
+      "kwic_context": "FECHA: 15/04/2026"
+    },
+    {
+      "parametro": "nit",
+      "valor": "900543210-8",
+      "confianza": 0.88,
+      "metodo": "visual_ai",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_ai_002",
+          "page": 1,
+          "text": "NIT: 900543210-8",
+          "bbox": [
+            72.0,
+            180.0,
+            300.0,
+            200.0
+          ],
+          "source": "visual_ai",
+          "evidence_score": 0.88,
+          "kwic_snippet": "NIT: 900543210-8"
+        }
+      ],
+      "valor_normalizado": "900543210-8",
       "formato_detectado": "NIT",
       "tipo_entidad": "nit",
-      "divisa": "COP",
-      "kwic_context": "NIT: 800.221.993-1"
+      "divisa": null,
+      "kwic_context": "NIT: 900543210-8"
     },
     {
       "parametro": "total",
-      "valor": "52.500",
-      "confianza": 0.99,
+      "valor": "$ 9.579.500 COP",
+      "confianza": 0.88,
       "metodo": "visual_ai",
       "evidencias": [
         {
           "evidence_id": "ev_p1_ai_003",
           "page": 1,
-          "text": "TOTAL: 52.500",
+          "text": "TOTAL: $ 9.579.500 COP",
           "bbox": [
-            643.0,
-            417.0,
-            668.0,
-            650.0
+            72.0,
+            210.0,
+            300.0,
+            230.0
           ],
           "source": "visual_ai",
-          "evidence_score": 0.99,
-          "kwic_snippet": "TOTAL PAGADO: $ 52.500 COP"
+          "evidence_score": 0.88,
+          "kwic_snippet": "TOTAL: $ 9.579.500 COP"
         }
       ],
-      "valor_normalizado": "52500.00",
+      "valor_normalizado": "9579500.00",
       "formato_detectado": "COP",
       "tipo_entidad": "moneda",
       "divisa": "COP",
-      "kwic_context": "TOTAL PAGADO: $ 52.500 COP"
+      "kwic_context": "TOTAL: $ 9.579.500 COP"
     }
   ],
   "telemetria": {
     "hash_ms": 1.2,
     "cache_ms": 0.8,
-    "fitz_ms": 9.3,
-    "classification_ms": 9.3,
-    "preprocess_ms": 190.24,
-    "render_ms": 102.87,
+    "fitz_ms": 9.62,
+    "classification_ms": 9.62,
+    "preprocess_ms": 253.7,
+    "render_ms": 103.45,
     "retrieval_ms": 0.0,
-    "gemini_ms": 3982.2,
+    "gemini_ms": 12328.71,
     "merge_ms": 0.0,
     "serialization_ms": 2.0,
-    "total_ms": 4294.61
+    "total_ms": 12705.47
   },
   "resumen_documento": "Expediente de 1 página(s) clasificado como FACTURA con destino a Contabilidad / Cuentas por Pagar.",
   "departamento_sugerido": "Contabilidad / Cuentas por Pagar",
-  "nombre_archivo_sugerido": "22092026_FACTURA_8002219931.pdf"
+  "nombre_archivo_sugerido": "15042026_FACTURA_9005432108.pdf"
 }

@@ -26,7 +26,7 @@ for directory in [DATA_DIR, UPLOADS_DIR, OUTPUT_DIR, YOLO_MODEL_PATH.parent]:
     directory.mkdir(parents=True, exist_ok=True)
 
 # API Keys & Endpoints (Handled internally)
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_API_KEY = os.getenv("")
 GROQ_API_KEY = os.getenv("")
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 

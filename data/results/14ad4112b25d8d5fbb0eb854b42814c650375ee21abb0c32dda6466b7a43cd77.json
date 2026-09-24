@@ -3,7 +3,7 @@
   "pipeline_version": "2.2",
   "status": "complete",
   "nivel_cache": "none",
-  "duracion_total_ms": 351.76,
+  "duracion_total_ms": 504.09,
   "paginas_totales": 20,
   "paginas_completadas": 20,
   "paginas_pendientes": [],
@@ -13,69 +13,40 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 8.66,
+      "duracion_ms": 15.14,
       "preprocesado": false,
-      "metadatos_visuales": [
-        {
-          "id_imagen": "img_p1_1_1",
-          "pagina": 1,
-          "tipo_fisico": "raster",
-          "bbox": [
-            0.0,
-            0.0,
-            595.0,
-            130.0
-          ],
-          "area_ratio": 0.1544,
-          "clasificacion_semantica": "logotipo",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p1_2_1",
-          "pagina": 1,
-          "tipo_fisico": "raster",
-          "bbox": [
-            50.0,
-            150.0,
-            250.0,
-            200.0
-          ],
-          "area_ratio": 0.02,
-          "clasificacion_semantica": "codigo_barras",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p1_3_1",
-          "pagina": 1,
-          "tipo_fisico": "raster",
-          "bbox": [
-            147.0,
-            720.0,
-            447.0,
-            780.0
-          ],
-          "area_ratio": 0.0359,
-          "clasificacion_semantica": "codigo_barras",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "vec_p1_1",
-          "pagina": 1,
-          "tipo_fisico": "vector",
-          "bbox": [
-            50.0,
-            400.0,
-            545.0,
-            560.0
-          ],
-          "area_ratio": 0.1581,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
-        }
-      ],
+      "metadatos_visuales": [],
       "evidencias": [
         {
           "evidence_id": "ev_p1_001",
+          "page": 1,
+          "text": "CONTRATISTA: CONSORCIO INFRAESTRUCTURA",
+          "bbox": [
+            136.01,
+            446.79,
+            389.64,
+            459.84
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE TÉCNICO Y EXPEDIENTE FORENSE AUDITORÍA INTEGRAL DE CONTRATACIÓN PÚBLICA, PERITAJE INFORMÁTICO Y EJECUCIÓN FINANCIERA NÚMERO DE EXPEDIENTE: EXP-2026-9041-AUD-NAL ENTIDAD CONTRATANTE: MINISTERIO DE TECNOLOGÍAS Y SERVICIOS DIGITALES CO..."
+        },
+        {
+          "evidence_id": "ev_p1_004",
+          "page": 1,
+          "text": "EXPEDIENTE: EXP-2026-9041-AUD-NAL",
+          "bbox": [
+            235.0,
+            414.79,
+            347.45,
+            427.84
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE TÉCNICO Y EXPEDIENTE FORENSE AUDITORÍA INTEGRAL DE CONTRATACIÓN PÚBLICA, PERITAJE INFORMÁTICO Y EJECUCIÓN FINANCIERA NÚMERO DE EXPEDIENTE: EXP-2026-9041-AUD-NAL ENTIDAD CONTRATANTE: MINISTERIO DE TECNOLOGÍAS Y SERVICIOS DIGITALES CO..."
+        },
+        {
+          "evidence_id": "ev_p1_006",
           "page": 1,
           "text": "FECHA: 2026-09-23",
           "bbox": [
@@ -89,7 +60,7 @@
           "kwic_snippet": "NIT CONTRATISTA: 901.884.219-4 VALOR TOTAL AUDITADO: $185.000.000 COP FECHA DE CORTE Y DICTAMEN: 2026-09-23 PERITO PRINCIPAL: Dr."
         },
         {
-          "evidence_id": "ev_p1_002",
+          "evidence_id": "ev_p1_007",
           "page": 1,
           "text": "NIT: 901.884.219-4",
           "bbox": [
@@ -103,7 +74,7 @@
           "kwic_snippet": "NIT CONTRATISTA: 901.884.219-4 VALOR TOTAL AUDITADO: $185.000.000 COP FECHA DE CORTE Y DICTAMEN: 2026-09-23 PERITO PRINCIPAL: Dr."
         },
         {
-          "evidence_id": "ev_p1_003",
+          "evidence_id": "ev_p1_008",
           "page": 1,
           "text": "TOTAL: $185.000.000 COP",
           "bbox": [
@@ -123,52 +94,65 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 15.04,
+      "duracion_ms": 12.22,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p2_1_1",
-          "pagina": 2,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p2_002",
+          "page": 2,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            57.12,
-            500.0,
-            537.88,
-            750.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.2399,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "COMPORTAMIENTO FINANCIERO TRIMESTRAL (REAL VS PRESUPUESTO) EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 2 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 3,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 6.09,
+      "duracion_ms": 5.98,
       "preprocesado": false,
-      "metadatos_visuales": [
-        {
-          "id_imagen": "vec_p3_1",
-          "pagina": 3,
-          "tipo_fisico": "vector",
-          "bbox": [
-            50.0,
-            240.0,
-            545.0,
-            420.0
-          ],
-          "area_ratio": 0.1778,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
-        }
-      ],
+      "metadatos_visuales": [],
       "evidencias": [
         {
-          "evidence_id": "ev_p3_001",
+          "evidence_id": "ev_p3_002",
+          "page": 3,
+          "text": "CONTRATISTA: Representante Cédula Matrícula Representante Mercantil Contratista",
+          "bbox": [
+            70.0,
+            364.79,
+            180.88,
+            409.84
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 0.88,
+          "kwic_snippet": "Representante Cédula Matrícula Representante Mercantil Contratista"
+        },
+        {
+          "evidence_id": "ev_p3_004",
+          "page": 3,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "NIT Contratista 901.884.219-4 Representante Contratista María Consuelo Gómez Álvarez Cédula Representante 52.890.124 de Bogotá Matrícula Mercantil 02984102-12 de Cámara de Comercio EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CO..."
+        },
+        {
+          "evidence_id": "ev_p3_005",
           "page": 3,
           "text": "NIT: Contratante 800.198.345-2",
           "bbox": [
@@ -188,214 +172,201 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 3.61,
+      "duracion_ms": 4.17,
       "preprocesado": false,
       "metadatos_visuales": [],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p4_001",
+          "page": 4,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 4 de 20"
+        }
+      ]
     },
     {
       "numero_pagina": 5,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 2.9,
+      "duracion_ms": 4.86,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "vec_p5_1",
-          "pagina": 5,
-          "tipo_fisico": "vector",
+          "evidence_id": "ev_p5_001",
+          "page": 5,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            50.0,
-            110.0,
-            545.0,
-            140.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.0296,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "$18.500.000 COP 2026-01-15 al 2029-01-15 Responsabilidad Civil POL-2026-905 LA PREVISORA SEGUROS $92.500.000 COP 2026-01-15 al 2027-01-15 EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado..."
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 6,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 3.36,
+      "duracion_ms": 5.45,
       "preprocesado": false,
       "metadatos_visuales": [],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p6_001",
+          "page": 6,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "Hito 1: Levantamiento de Arquitectura y Baseline 100% 2026-02-15 APROBADO Hito 2: Aprovisionamiento de Hardware y Redes 100% 2026-03-30 APROBADO Hito 3: Despliegue de Motores de Análisis Forense 98% 2026-05-15 APROBADO Hito 4: Migración de ..."
+        }
+      ]
     },
     {
       "numero_pagina": 7,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 7.47,
+      "duracion_ms": 8.67,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p7_1_1",
-          "pagina": 7,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p7_001",
+          "page": 7,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            50.0,
-            116.2,
-            545.0,
-            353.8
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.2348,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 7 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 8,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 6.49,
+      "duracion_ms": 8.09,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p8_1_1",
-          "pagina": 8,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p8_001",
+          "page": 8,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            95.0,
-            110.0,
-            495.0,
-            330.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.1757,
-          "clasificacion_semantica": "fotografia",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "CAPÍTULO 6: ACTA DE INSPECCIÓN FÍSICA EN DATA CENTER INVENTARIO TÉCNICO DE ACTIVOS VERIFICADOS EN CAMPO SRV-01 Servidor Cómputo Principal Dell PowerEdge R750 SN-8849-XK01 OPERACIONAL SRV-02 Servidor de Inferencia Acelerada NVIDIA A100 SN-99..."
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 9,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 7.44,
+      "duracion_ms": 9.57,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p9_1_1",
-          "pagina": 9,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p9_001",
+          "page": 9,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            70.0,
-            186.67,
-            270.0,
-            253.33
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.0266,
-          "clasificacion_semantica": "firma_manuscrita",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p9_2_1",
-          "pagina": 9,
-          "tipo_fisico": "raster",
-          "bbox": [
-            320.0,
-            186.67,
-            520.0,
-            253.33
-          ],
-          "area_ratio": 0.0266,
-          "clasificacion_semantica": "firma_manuscrita",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p9_3_1",
-          "pagina": 9,
-          "tipo_fisico": "raster",
-          "bbox": [
-            195.0,
-            346.67,
-            395.0,
-            413.33
-          ],
-          "area_ratio": 0.0266,
-          "clasificacion_semantica": "firma_manuscrita",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "ALBERTO JARAMILLO DUQUE Interventor Principal del Proyecto EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 9 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 10,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 4.16,
+      "duracion_ms": 6.41,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p10_1_1",
-          "pagina": 10,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p10_001",
+          "page": 10,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            185.0,
-            120.0,
-            405.0,
-            340.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.0966,
-          "clasificacion_semantica": "sello_oficial",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 10 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 11,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 6.18,
+      "duracion_ms": 6.63,
       "preprocesado": false,
-      "metadatos_visuales": [
-        {
-          "id_imagen": "img_p11_1_1",
-          "pagina": 11,
-          "tipo_fisico": "raster",
-          "bbox": [
-            50.0,
-            380.0,
-            190.0,
-            520.0
-          ],
-          "area_ratio": 0.0391,
-          "clasificacion_semantica": "codigo_qr",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "vec_p11_1",
-          "pagina": 11,
-          "tipo_fisico": "vector",
-          "bbox": [
-            50.0,
-            95.0,
-            545.0,
-            185.0
-          ],
-          "area_ratio": 0.0889,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
-        }
-      ],
+      "metadatos_visuales": [],
       "evidencias": [
         {
           "evidence_id": "ev_p11_001",
+          "page": 11,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 11 de 20"
+        },
+        {
+          "evidence_id": "ev_p11_002",
           "page": 11,
           "text": "FECHA: 2026-04-30",
           "bbox": [
@@ -409,7 +380,7 @@
           "kwic_snippet": "ADQUIRIENTE: Ministerio de Tecnologías y Servicios Digitales · NIT: 800.198.345-2 Fecha de Emisión: 2026-04-30 · Fecha de Vencimiento: 2026-05-30 01 Servicios de Auditoría Forense y Peritaje Informático Mes 1 $35.000.000 $35.000.000 02 Cano..."
         },
         {
-          "evidence_id": "ev_p11_004",
+          "evidence_id": "ev_p11_005",
           "page": 11,
           "text": "NIT: 901.884.219-4",
           "bbox": [
@@ -423,7 +394,7 @@
           "kwic_snippet": "· NIT: 901.884.219-4 Dirección: Carrera 7 # 71-52 Torre B Piso 14, Bogotá D.C."
         },
         {
-          "evidence_id": "ev_p11_006",
+          "evidence_id": "ev_p11_007",
           "page": 11,
           "text": "TOTAL: $50.000.000 COP",
           "bbox": [
@@ -443,27 +414,26 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 3.02,
+      "duracion_ms": 6.43,
       "preprocesado": false,
-      "metadatos_visuales": [
-        {
-          "id_imagen": "img_p12_1_1",
-          "pagina": 12,
-          "tipo_fisico": "raster",
-          "bbox": [
-            147.0,
-            400.0,
-            447.0,
-            460.0
-          ],
-          "area_ratio": 0.0359,
-          "clasificacion_semantica": "codigo_barras",
-          "contenido_decodificado": null
-        }
-      ],
+      "metadatos_visuales": [],
       "evidencias": [
         {
           "evidence_id": "ev_p12_001",
+          "page": 12,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "SUBTOTAL: $25.000.000 COP IVA (19%): $4.750.000 COP TOTAL FACTURA: $29.750.000 COP EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 12 de ..."
+        },
+        {
+          "evidence_id": "ev_p12_002",
           "page": 12,
           "text": "TOTAL: $25.000.000 COP",
           "bbox": [
@@ -483,150 +453,151 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 5.08,
+      "duracion_ms": 5.92,
       "preprocesado": false,
       "metadatos_visuales": [],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p13_001",
+          "page": 13,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "CAPÍTULO 9: TABLA DE DESEMBOLSOS Y AMORTIZACIÓN FINANCIERA Mes 01 $15.416.000 $15.416.000 $169.584.000 PAGADO Mes 02 $15.416.000 $30.832.000 $154.168.000 PAGADO Mes 03 $15.416.000 $46.248.000 $138.752.000 PAGADO Mes 04 $15.416.000 $61.664.0..."
+        }
+      ]
     },
     {
       "numero_pagina": 14,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 6.6,
+      "duracion_ms": 7.82,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p14_1_1",
-          "pagina": 14,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p14_001",
+          "page": 14,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            95.0,
-            120.0,
-            495.0,
-            420.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.2395,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 14 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 15,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 2.17,
+      "duracion_ms": 4.44,
       "preprocesado": false,
       "metadatos_visuales": [],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p15_001",
+          "page": 15,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "CAPÍTULO 11: AUDITORÍA DE TRÁFICO Y ANÁLISIS DE TELEMETRÍA EVT-001 2026-04-12 03:14:22 Escaneo de Puertos TCP Externo BAJA BLOQUEADO EVT-002 2026-05-18 14:28:01 Intento de Fuerza Bruta SSH Gateway MEDIA IP BAN 24H EVT-003 2026-06-02 09:12:4..."
+        }
+      ]
     },
     {
       "numero_pagina": 16,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 5.55,
+      "duracion_ms": 7.63,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p16_1_1",
-          "pagina": 16,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p16_001",
+          "page": 16,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            95.0,
-            110.0,
-            495.0,
-            330.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.1757,
-          "clasificacion_semantica": "fotografia",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p16_2_1",
-          "pagina": 16,
-          "tipo_fisico": "raster",
-          "bbox": [
-            95.0,
-            360.0,
-            495.0,
-            580.0
-          ],
-          "area_ratio": 0.1757,
-          "clasificacion_semantica": "fotografia",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "ANEXO FOTOGRÁFICO 1: INSPECCIÓN DE INFRAESTRUCTURA EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 16 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 17,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 4.3,
+      "duracion_ms": 4.6,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p17_1_1",
-          "pagina": 17,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p17_002",
+          "page": 17,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            95.0,
-            110.0,
-            495.0,
-            330.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.1757,
-          "clasificacion_semantica": "fotografia",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 17 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     },
     {
       "numero_pagina": 18,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 6.02,
+      "duracion_ms": 4.87,
       "preprocesado": false,
-      "metadatos_visuales": [
-        {
-          "id_imagen": "img_p18_1_1",
-          "pagina": 18,
-          "tipo_fisico": "raster",
-          "bbox": [
-            195.0,
-            376.67,
-            395.0,
-            443.33
-          ],
-          "area_ratio": 0.0266,
-          "clasificacion_semantica": "firma_manuscrita",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "vec_p18_1",
-          "pagina": 18,
-          "tipo_fisico": "vector",
-          "bbox": [
-            50.0,
-            110.0,
-            545.0,
-            350.0
-          ],
-          "area_ratio": 0.2371,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
-        }
-      ],
+      "metadatos_visuales": [],
       "evidencias": [
         {
           "evidence_id": "ev_p18_001",
+          "page": 18,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "GERENCIA DE BANCA INSTITUCIONAL EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 18 de 20"
+        },
+        {
+          "evidence_id": "ev_p18_002",
           "page": 18,
           "text": "NIT: 860.002.964-4",
           "bbox": [
@@ -646,94 +617,107 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 3.22,
+      "duracion_ms": 5.01,
       "preprocesado": false,
       "metadatos_visuales": [],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p19_001",
+          "page": 19,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
+          "bbox": [
+            102.9,
+            31.4,
+            308.83,
+            42.39
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 19 de 20"
+        }
+      ]
     },
     {
       "numero_pagina": 20,
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 8.89,
+      "duracion_ms": 9.52,
       "preprocesado": false,
-      "metadatos_visuales": [
+      "metadatos_visuales": [],
+      "evidencias": [
         {
-          "id_imagen": "img_p20_1_1",
-          "pagina": 20,
-          "tipo_fisico": "raster",
+          "evidence_id": "ev_p20_002",
+          "page": 20,
+          "text": "EXPEDIENTE: FORENSE N° EXP-2026-9041",
           "bbox": [
-            60.0,
-            205.0,
-            240.0,
-            265.0
+            102.9,
+            31.4,
+            308.83,
+            42.39
           ],
-          "area_ratio": 0.0216,
-          "clasificacion_semantica": "firma_manuscrita",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p20_2_1",
-          "pagina": 20,
-          "tipo_fisico": "raster",
-          "bbox": [
-            350.0,
-            205.0,
-            530.0,
-            265.0
-          ],
-          "area_ratio": 0.0216,
-          "clasificacion_semantica": "firma_manuscrita",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p20_3_1",
-          "pagina": 20,
-          "tipo_fisico": "raster",
-          "bbox": [
-            205.0,
-            345.0,
-            385.0,
-            405.0
-          ],
-          "area_ratio": 0.0216,
-          "clasificacion_semantica": "firma_manuscrita",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "img_p20_4_1",
-          "pagina": 20,
-          "tipo_fisico": "raster",
-          "bbox": [
-            380.0,
-            480.0,
-            530.0,
-            630.0
-          ],
-          "area_ratio": 0.0449,
-          "clasificacion_semantica": "sello_oficial",
-          "contenido_decodificado": null
-        },
-        {
-          "id_imagen": "vec_p20_1",
-          "pagina": 20,
-          "tipo_fisico": "vector",
-          "bbox": [
-            50.0,
-            660.0,
-            545.0,
-            730.0
-          ],
-          "area_ratio": 0.0692,
-          "clasificacion_semantica": "diagrama",
-          "contenido_decodificado": null
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "EXPEDIENTE FORENSE N° EXP-2026-9041 · AUDITORÍA INTEGRAL CONFIDENCIAL / RESERVADO Sistema Automatizado de Peritaje Documental · PyDective v2.2.0 Folio 20 de 20"
         }
-      ],
-      "evidencias": []
+      ]
     }
   ],
   "hallazgos": [
+    {
+      "parametro": "contratista",
+      "valor": "CONSORCIO INFRAESTRUCTURA",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_001",
+          "page": 1,
+          "text": "CONTRATISTA: CONSORCIO INFRAESTRUCTURA",
+          "bbox": [
+            136.01,
+            446.79,
+            389.64,
+            459.84
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE TÉCNICO Y EXPEDIENTE FORENSE AUDITORÍA INTEGRAL DE CONTRATACIÓN PÚBLICA, PERITAJE INFORMÁTICO Y EJECUCIÓN FINANCIERA NÚMERO DE EXPEDIENTE: EXP-2026-9041-AUD-NAL ENTIDAD CONTRATANTE: MINISTERIO DE TECNOLOGÍAS Y SERVICIOS DIGITALES CO..."
+        }
+      ],
+      "valor_normalizado": "CONSORCIO INFRAESTRUCTURA",
+      "formato_detectado": "TEXT",
+      "tipo_entidad": "texto",
+      "divisa": null,
+      "kwic_context": "REPORTE TÉCNICO Y EXPEDIENTE FORENSE AUDITORÍA INTEGRAL DE CONTRATACIÓN PÚBLICA, PERITAJE INFORMÁTICO Y EJECUCIÓN FINANCIERA NÚMERO DE EXPEDIENTE: EXP-2026-9041-AUD-NAL ENTIDAD CONTRATANTE: MINISTERIO DE TECNOLOGÍAS Y SERVICIOS DIGITALES CO..."
+    },
+    {
+      "parametro": "expediente",
+      "valor": "EXP-2026-9041-AUD-NAL",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_004",
+          "page": 1,
+          "text": "EXPEDIENTE: EXP-2026-9041-AUD-NAL",
+          "bbox": [
+            235.0,
+            414.79,
+            347.45,
+            427.84
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE TÉCNICO Y EXPEDIENTE FORENSE AUDITORÍA INTEGRAL DE CONTRATACIÓN PÚBLICA, PERITAJE INFORMÁTICO Y EJECUCIÓN FINANCIERA NÚMERO DE EXPEDIENTE: EXP-2026-9041-AUD-NAL ENTIDAD CONTRATANTE: MINISTERIO DE TECNOLOGÍAS Y SERVICIOS DIGITALES CO..."
+        }
+      ],
+      "valor_normalizado": "2026.00",
+      "formato_detectado": "COP",
+      "tipo_entidad": "moneda",
+      "divisa": "COP",
+      "kwic_context": "REPORTE TÉCNICO Y EXPEDIENTE FORENSE AUDITORÍA INTEGRAL DE CONTRATACIÓN PÚBLICA, PERITAJE INFORMÁTICO Y EJECUCIÓN FINANCIERA NÚMERO DE EXPEDIENTE: EXP-2026-9041-AUD-NAL ENTIDAD CONTRATANTE: MINISTERIO DE TECNOLOGÍAS Y SERVICIOS DIGITALES CO..."
+    },
     {
       "parametro": "fecha",
       "valor": "2026-09-23",
@@ -741,7 +725,7 @@
       "metodo": "spatial_vector",
       "evidencias": [
         {
-          "evidence_id": "ev_p1_001",
+          "evidence_id": "ev_p1_006",
           "page": 1,
           "text": "FECHA: 2026-09-23",
           "bbox": [
@@ -768,7 +752,7 @@
       "metodo": "spatial_vector",
       "evidencias": [
         {
-          "evidence_id": "ev_p1_002",
+          "evidence_id": "ev_p1_007",
           "page": 1,
           "text": "NIT: 901.884.219-4",
           "bbox": [
@@ -795,7 +779,7 @@
       "metodo": "spatial_vector",
       "evidencias": [
         {
-          "evidence_id": "ev_p1_003",
+          "evidence_id": "ev_p1_008",
           "page": 1,
           "text": "TOTAL: $185.000.000 COP",
           "bbox": [
@@ -817,17 +801,17 @@
     }
   ],
   "telemetria": {
-    "hash_ms": 1.5,
-    "cache_ms": 1.0,
-    "fitz_ms": 116.27,
-    "classification_ms": 116.27,
+    "hash_ms": 1.2,
+    "cache_ms": 0.8,
+    "fitz_ms": 143.43,
+    "classification_ms": 143.43,
     "preprocess_ms": 0.0,
     "render_ms": 0.0,
-    "retrieval_ms": 225.48,
+    "retrieval_ms": 350.66,
     "gemini_ms": 0.0,
     "merge_ms": 0.0,
-    "serialization_ms": 3.0,
-    "total_ms": 351.76
+    "serialization_ms": 2.0,
+    "total_ms": 504.09
   },
   "resumen_documento": "Expediente de 20 página(s) clasificado como FACTURA con destino a Contabilidad / Cuentas por Pagar.",
   "departamento_sugerido": "Contabilidad / Cuentas por Pagar",

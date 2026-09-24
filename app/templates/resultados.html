@@ -22,9 +22,10 @@
             </a>
             <div class="doc-title-group">
                 <h1 class="results-title">Auditoría y Triage Documental</h1>
-                <div class="hash-tag">
-                    <span>SHA-256:</span>
-                    <code class="hash-code" id="doc-pdf-hash">{{ resultado.pdf_hash }}</code>
+                <div class="doc-meta-subline">
+                    <span class="doc-badge-status">✓ Verificado</span>
+                    <span class="doc-id-pill" title="Huella digital: {{ resultado.pdf_hash }}">ID: {{ resultado.pdf_hash[:10] }}...</span>
+                    <code class="hash-code" id="doc-pdf-hash" style="display: none;">{{ resultado.pdf_hash }}</code>
                 </div>
             </div>
         </div>
@@ -32,25 +33,27 @@
         <div class="results-header-badges">
             {% if resultado.departamento_sugerido %}
             <div class="metric-pill" style="background: #eef2ff; border-color: #c7d2fe;">
-                <span class="metric-label" style="color: #4338ca;">Área / Destino</span>
+                <span class="metric-label" style="color: #4338ca;">Área Asignada</span>
                 <span class="metric-value" style="color: #3730a3;">{{ resultado.departamento_sugerido }}</span>
             </div>
             {% endif %}
             <div class="metric-pill">
-                <span class="metric-label">Caché</span>
-                <span class="metric-value badge-cache-{{ resultado.nivel_cache.value.lower() }}">{{ resultado.nivel_cache.value }}</span>
-            </div>
-            <div class="metric-pill">
-                <span class="metric-label">Tiempo Total</span>
-                <span class="metric-value" style="color: #4f46e5;">{{ resultado.duracion_total_ms | round(1) }} ms</span>
-            </div>
-            <div class="metric-pill">
                 <span class="metric-label">Páginas</span>
-                <span class="metric-value">{{ resultado.paginas_completadas }} / {{ resultado.paginas_totales }}</span>
+                <span class="metric-value">{{ resultado.paginas_completadas }} de {{ resultado.paginas_totales }}</span>
+            </div>
+            <div class="metric-pill">
+                <span class="metric-label">Tiempo de Análisis</span>
+                <span class="metric-value" style="color: #4f46e5;">
+                    {% if resultado.duracion_total_ms < 1000 %}
+                        {{ (resultado.duracion_total_ms / 1000) | round(2) }} s
+                    {% else %}
+                        {{ (resultado.duracion_total_ms / 1000) | round(1) }} s
+                    {% endif %}
+                </span>
             </div>
             <div class="metric-pill" style="background: #ecfdf5; border-color: #a7f3d0;">
-                <span class="metric-label" style="color: #047857;">Costo Operativo</span>
-                <span class="metric-value" style="color: #10b981;">$0.00 COP</span>
+                <span class="metric-label" style="color: #047857;">Estado</span>
+                <span class="metric-value" style="color: #059669;">✓ Procesado</span>
             </div>
         </div>
     </div>
@@ -177,14 +180,11 @@
                     <span>💬 Asistente Documental</span>
                 </button>
                 <button type="button" class="tab-btn" id="tab-btn-findings" onclick="switchResultsTab('findings')">
-                    <span>📋 Hallazgos Extraídos</span>
+                    <span>📋 Datos Extraídos</span>
                     <span class="tab-badge">{{ resultado.hallazgos | length }}</span>
                 </button>
                 <button type="button" class="tab-btn" id="tab-btn-visuals" onclick="switchResultsTab('visuals')">
-                    <span>🖼️ Inventario Visual</span>
-                </button>
-                <button type="button" class="tab-btn" id="tab-btn-telemetry" onclick="switchResultsTab('telemetry')">
-                    <span>⚡ Telemetría</span>
+                    <span>🖼️ Firmas y Elementos Visuales</span>
                 </button>
             </div>
 
@@ -242,10 +242,10 @@
                 <div class="enterprise-card findings-card">
                     <div class="table-filter-bar">
                         <div>
-                            <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Entidades y Parámetros Extraídos</h2>
-                            <p style="font-size: 0.8rem; color: #64748b;">Extracción determinística con citas espaciales verificables.</p>
+                            <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Datos y Entidades Extraídas</h2>
+                            <p style="font-size: 0.8rem; color: #64748b;">Valores identificados y verificados con referencias directas en el visor.</p>
                         </div>
-                        <input type="text" id="findings-search-filter" class="table-search-input" placeholder="Filtrar hallazgos..." oninput="filterFindingsTable(this.value)">
+                        <input type="text" id="findings-search-filter" class="table-search-input" placeholder="Filtrar datos..." oninput="filterFindingsTable(this.value)">
                     </div>
 
                     {% if resultado.hallazgos %}
@@ -253,11 +253,11 @@
                         <table class="findings-table" id="findings-table">
                             <thead>
                                 <tr>
-                                    <th>Parámetro</th>
-                                    <th>Valor Extraído</th>
-                                    <th>Método</th>
-                                    <th>Confianza</th>
-                                    <th>Citas en Visor</th>
+                                    <th>Dato Extraído</th>
+                                    <th>Valor Identificado</th>
+                                    <th>Origen</th>
+                                    <th>Precisión</th>
+                                    <th>Ubicación en Visor</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -277,9 +277,17 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <span class="method-tag method-{{ h.metodo.value }}">
-                                            {{ h.metodo.value }}
-                                        </span>
+                                        {% if 'spatial' in h.metodo.value or 'native' in h.metodo.value %}
+                                        <span class="method-tag method-spatial_vector">Texto Digital</span>
+                                        {% elif 'gemini' in h.metodo.value %}
+                                        <span class="method-tag method-multimodal_gemini">Lectura Inteligente</span>
+                                        {% elif 'ocr' in h.metodo.value %}
+                                        <span class="method-tag method-ocr_tesseract">Transcripción OCR</span>
+                                        {% elif 'dian' in h.metodo.value %}
+                                        <span class="method-tag method-dian_xml">Factura DIAN</span>
+                                        {% else %}
+                                        <span class="method-tag">{{ h.metodo.value }}</span>
+                                        {% endif %}
                                     </td>
                                     <td>
                                         <span style="font-size: 0.85rem; font-weight: 700; color: #047857;">{{ (h.confianza * 100) | round(0) }}%</span>
@@ -347,42 +355,7 @@
                 </div>
             </div>
 
-            <!-- PESTAÑA 4: TELEMETRÍA OPERATIVA Y RENDIMIENTO -->
-            <div class="tab-panel" id="panel-telemetry">
-                <div class="enterprise-card findings-card">
-                    <div style="margin-bottom: 1rem;">
-                        <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Telemetría Operativa del Sistema</h2>
-                        <p style="font-size: 0.8rem; color: #64748b;">Desglose del tiempo de procesamiento y eficiencia de recursos.</p>
-                    </div>
 
-                    <div class="telemetry-grid">
-                        <div class="telemetry-tile">
-                            <span class="telemetry-tile-label">PyMuPDF / Fitz (C)</span>
-                            <span class="telemetry-tile-value" style="color: #4f46e5;">{{ (resultado.telemetria.fitz_ms or 14.0) | round(1) }} ms</span>
-                        </div>
-                        <div class="telemetry-tile">
-                            <span class="telemetry-tile-label">Clasificación</span>
-                            <span class="telemetry-tile-value">{{ (resultado.telemetria.classification_ms or 5.0) | round(1) }} ms</span>
-                        </div>
-                        <div class="telemetry-tile">
-                            <span class="telemetry-tile-label">OpenCV Filtros</span>
-                            <span class="telemetry-tile-value">{{ (resultado.telemetria.preprocess_ms or 0.0) | round(1) }} ms</span>
-                        </div>
-                        <div class="telemetry-tile">
-                            <span class="telemetry-tile-label">Inferencia IA</span>
-                            <span class="telemetry-tile-value">{{ (resultado.telemetria.gemini_ms or 0.0) | round(1) }} ms</span>
-                        </div>
-                        <div class="telemetry-tile">
-                            <span class="telemetry-tile-label">Nivel de Caché</span>
-                            <span class="telemetry-tile-value" style="color: #0284c7;">{{ resultado.nivel_cache.value }}</span>
-                        </div>
-                        <div class="telemetry-tile">
-                            <span class="telemetry-tile-label">Costo Operativo</span>
-                            <span class="telemetry-tile-value" style="color: #10b981;">$0.00 COP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>

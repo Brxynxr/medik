@@ -305,11 +305,21 @@ code, pre {
 /* Highlight Stats Row */
 .hero-stats-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto 1.5rem;
     width: 100%;
+}
+@media (max-width: 840px) {
+    .hero-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .hero-stats-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 .hero-stat-card {
@@ -402,13 +412,7 @@ code, pre {
 }
 
 .file-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
+    display: none !important;
 }
 
 .dropzone-inner {
@@ -574,12 +578,14 @@ code, pre {
 .active-params-container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 0.5rem;
-    min-height: 42px;
-    padding: 0.5rem;
+    min-height: 40px;
+    padding: 0.4rem 0.65rem;
     background: #f8fafc;
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
+    margin-bottom: 0.75rem;
 }
 
 .param-tag {
@@ -860,6 +866,36 @@ code, pre {
     font-size: 1.35rem;
     font-weight: 800;
     color: var(--text-main);
+}
+
+.doc-meta-subline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.doc-badge-status {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #047857;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    padding: 0.15rem 0.55rem;
+    border-radius: var(--radius-full);
+}
+
+.doc-id-pill {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #64748b;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
 }
 
 .hash-tag {
@@ -1603,17 +1639,21 @@ code, pre {
     padding: 0.15rem 0.45rem;
     border-radius: var(--radius-xs);
 }
-.method-native_text {
-    background: #ecfdf5;
-    color: #047857;
-}
-.method-spatial_vector {
+.method-native_text, .method-spatial_vector {
     background: #eef2ff;
     color: #4338ca;
 }
-.method-visual_ai {
-    background: #f5f3ff;
-    color: #6d28d9;
+.method-visual_ai, .method-multimodal_gemini {
+    background: #fdf2f8;
+    color: #be185d;
+}
+.method-ocr_tesseract {
+    background: #fef3c7;
+    color: #b45309;
+}
+.method-dian_xml {
+    background: #ecfdf5;
+    color: #047857;
 }
 
 .btn-search-trigger {

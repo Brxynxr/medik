@@ -13,45 +13,38 @@
             Inteligencia Documental y <span class="gradient-text">Buzón Corporativo RIWI</span>
         </h1>
         <p class="hero-subtitle">
-            Recepción de documentos multiformato, clasificación determinística DIAN UBL 2.1 (0.002s), preprocesamiento morfológico OpenCV, inventario visual de firmas y sellos, y asistente cognitivo con costo operativo de $0.00 COP.
+            Recepción y análisis inteligente de documentos corporativos, clasificación automática por área, detección de firmas y sellos, y asistente para consultar cualquier dato del expediente.
         </p>
     </div>
 
-    <!-- Highlight Operational Stats -->
+    <!-- Highlight Operational Stats (Non-Technical, Benefit-Focused) -->
     <div class="hero-stats-row">
         <div class="hero-stat-card">
             <div class="hero-stat-icon">⚡</div>
             <div class="hero-stat-details">
-                <span class="hero-stat-value">0.002s</span>
-                <span class="hero-stat-label">Clasificación DIAN</span>
+                <span class="hero-stat-value">Alta Velocidad</span>
+                <span class="hero-stat-label">Análisis en segundos</span>
             </div>
         </div>
         <div class="hero-stat-card">
             <div class="hero-stat-icon">📑</div>
             <div class="hero-stat-details">
-                <span class="hero-stat-value">Hasta 100 págs</span>
-                <span class="hero-stat-label">Capacidad Multipágina</span>
+                <span class="hero-stat-value">Multiformato</span>
+                <span class="hero-stat-label">PDF, Word, facturas e imágenes</span>
             </div>
         </div>
         <div class="hero-stat-card">
-            <div class="hero-stat-icon">🛡️</div>
+            <div class="hero-stat-icon">✍️</div>
             <div class="hero-stat-details">
-                <span class="hero-stat-value">Doble Caché</span>
-                <span class="hero-stat-label">L0 RAM + L1 Disco</span>
+                <span class="hero-stat-value">Firmas y Sellos</span>
+                <span class="hero-stat-label">Auditoría visual y OCR</span>
             </div>
         </div>
         <div class="hero-stat-card">
-            <div class="hero-stat-icon">🏷️</div>
+            <div class="hero-stat-icon">📁</div>
             <div class="hero-stat-details">
-                <span class="hero-stat-value">{FECHA}_{CAT}_{ID}</span>
-                <span class="hero-stat-label">Renombrado Institucional</span>
-            </div>
-        </div>
-        <div class="hero-stat-card">
-            <div class="hero-stat-icon" style="background: #ecfdf5; color: #10b981;">💰</div>
-            <div class="hero-stat-details">
-                <span class="hero-stat-value" style="color: #047857;">$0.00 COP</span>
-                <span class="hero-stat-label">Cero Costo Operativo</span>
+                <span class="hero-stat-value">Clasificación</span>
+                <span class="hero-stat-label">Enrutamiento inteligente</span>
             </div>
         </div>
     </div>
@@ -59,28 +52,28 @@
     <!-- Main Intake Form Card -->
     <div class="enterprise-card form-card">
         <form id="upload-form" class="upload-form" onsubmit="event.preventDefault(); submitJob();">
-            <!-- Dropzone Area (Supports Multiple Files & Incremental Upload) -->
+            <!-- Dropzone Area (Clean and Clickable) -->
             <div class="form-group">
                 <div class="label-with-hint">
                     <label class="form-label" for="pdf-file-input">Documentos Corporativos Multiformato</label>
                     <span class="label-subhint">Puedes subir múltiples archivos a la vez o agregarlos uno a uno</span>
                 </div>
                 <div id="dropzone-area" class="dropzone">
-                    <input type="file" id="pdf-file-input" name="files" accept=".pdf,.xml,.zip,.docx,.png,.jpg,.jpeg,.tiff,.webp,application/pdf" class="file-input" multiple>
+                    <input type="file" id="pdf-file-input" name="files" accept=".pdf,.xml,.zip,.docx,.png,.jpg,.jpeg,.tiff,.webp,application/pdf" class="file-input" style="display: none;" multiple>
                     <div class="dropzone-inner" id="dropzone-prompt">
                         <div class="dropzone-icon">
-                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                 <polyline points="17 8 12 3 7 8"></polyline>
                                 <line x1="12" y1="3" x2="12" y2="15"></line>
                             </svg>
                         </div>
-                        <span class="dropzone-title">Arrastra uno o varios documentos aquí o haz clic para examinar</span>
-                        <span class="dropzone-hint">Carga individual o en lote (.pdf, .zip, .xml, .docx, imágenes):</span>
+                        <span class="dropzone-title">Arrastra tus documentos aquí o haz clic para seleccionarlos</span>
+                        <span class="dropzone-hint">Carga individual o en lote de archivos</span>
                         <div class="format-badges-row">
-                            <span class="format-badge">PDF Multipágina (hasta 100 págs)</span>
-                            <span class="format-badge">Factura Electrónica DIAN (ZIP / XML UBL 2.1)</span>
-                            <span class="format-badge">Documentos Word (.docx)</span>
+                            <span class="format-badge">PDF</span>
+                            <span class="format-badge">Facturas DIAN (XML / ZIP)</span>
+                            <span class="format-badge">Word (.docx)</span>
                             <span class="format-badge">Imágenes (.png, .jpg)</span>
                         </div>
                     </div>
@@ -113,48 +106,45 @@
                 </div>
             </div>
 
-            <!-- Parameters Section -->
+            <!-- Parameters Section (Cleaned and De-saturated) -->
             <div class="form-group">
                 <div class="label-with-hint">
-                    <label class="form-label" for="param-input">Parámetros a Extraer (Entidades / Claves Corporativas)</label>
-                    <span class="label-subhint">Presiona Enter o haz clic en Agregar</span>
+                    <label class="form-label" for="param-input">Datos Clave a Extraer (Opcional)</label>
+                    <span class="label-subhint">Información que el sistema identificará y tabulará en el documento</span>
                 </div>
 
+                <!-- Input Row with integrated Add button -->
                 <div class="param-input-wrapper">
-                    <input type="text" id="param-input" class="text-input" placeholder="Ej: total, arrendador, fecha de vencimiento, nit, diagnóstico..." autocomplete="off">
+                    <input type="text" id="param-input" class="text-input" placeholder="Escribe un dato y presiona Enter (ej: total, fecha, nit, contrato)..." autocomplete="off">
                     <button type="button" id="btn-add-param" class="btn btn-secondary">
                         <span>+ Agregar</span>
                     </button>
                 </div>
 
-                <!-- Preset Chips Quick Selection (matching media_1790184779384.png) -->
-                <div class="preset-chips-group">
-                    <span class="presets-label">Sugeridos:</span>
-                    <div class="chips-container" id="preset-chips">
-                        <button type="button" class="preset-chip" onclick="addParamTag('total')">💰 Total Facturado</button>
-                        <button type="button" class="preset-chip" onclick="addParamTag('fecha')">📅 Fecha Emisión</button>
-                        <button type="button" class="preset-chip" onclick="addParamTag('nit')">🆔 NIT / Cédula</button>
-                        <button type="button" class="preset-chip" onclick="addParamTag('emisor')">🏢 Emisor / Proveedor</button>
-                        <button type="button" class="preset-chip" onclick="addParamTag('departamento')">🏛️ Área Destino</button>
-                        <button type="button" class="preset-chip" onclick="addParamTag('firmas')">✍️ Firmas y Sellos</button>
-                        <button type="button" class="preset-chip" onclick="addParamTag('clausula')">⚖️ Cláusula Penal</button>
-                        <button type="button" class="preset-chip" onclick="addParamTag('vigencia')">📑 Vigencia / Plazo</button>
-                    </div>
-                </div>
-
-                <!-- Active Parameter Tags -->
+                <!-- Active Parameter Tags Box -->
                 <div class="active-params-container" id="active-params-container">
                     <!-- Populated by JS -->
                 </div>
+
+                <!-- Minimal, Clean Quick Suggestions -->
+                <div class="preset-chips-group">
+                    <span class="presets-label">Sugerencias rápidas:</span>
+                    <div class="chips-container" id="preset-chips">
+                        <button type="button" class="preset-chip" onclick="addParamTag('total')">+ Total / Monto</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('fecha')">+ Fecha</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('nit')">+ NIT / Identificación</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('emisor')">+ Emisor / Proveedor</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Inspection Settings -->
+            <!-- Inspection Settings (Simplified and Clear) -->
             <div class="form-group">
                 <label class="custom-checkbox-label">
                     <input type="checkbox" id="catalogar-imagenes-checkbox" name="catalogar_imagenes" checked>
                     <div class="checkbox-text">
-                        <strong>Inspección Profunda de Firmas, Sellos y Elementos Gráficos</strong>
-                        <small>Detección espacial morfológica de firmas autógrafas, sellos institucionales y códigos gráficos con coordenadas exactas.</small>
+                        <strong>Auditoría visual de firmas y sellos</strong>
+                        <small>Identifica automáticamente firmas autógrafas, sellos institucionales y páginas escaneadas.</small>
                     </div>
                 </label>
             </div>

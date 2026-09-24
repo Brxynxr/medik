@@ -3,7 +3,7 @@
   "pipeline_version": "2.2",
   "status": "complete",
   "nivel_cache": "none",
-  "duracion_total_ms": 6963.0,
+  "duracion_total_ms": 44609.48,
   "paginas_totales": 30,
   "paginas_completadas": 30,
   "paginas_pendientes": [],
@@ -13,26 +13,12 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 7.64,
+      "duracion_ms": 12.78,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
         {
-          "evidence_id": "ev_p1_002",
-          "page": 1,
-          "text": "FECHA: 23 de septiembre de 2026",
-          "bbox": [
-            178.88,
-            354.67,
-            337.47,
-            368.32
-          ],
-          "source": "spatial_vector",
-          "evidence_score": 1.0,
-          "kwic_snippet": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
-        },
-        {
-          "evidence_id": "ev_p1_003",
+          "evidence_id": "ev_p1_001",
           "page": 1,
           "text": "NIT: 900.482.317-5",
           "bbox": [
@@ -52,7 +38,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 9.64,
+      "duracion_ms": 14.79,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -77,7 +63,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 9.53,
+      "duracion_ms": 12.16,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -87,7 +73,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 7.04,
+      "duracion_ms": 6.99,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -97,7 +83,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 354.76,
+      "duracion_ms": 11696.53,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -115,14 +101,29 @@
           "contenido_decodificado": null
         }
       ],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p5_ai_001",
+          "page": 5,
+          "text": "EXPEDIENTE: 12 meses",
+          "bbox": [
+            72.0,
+            150.0,
+            300.0,
+            170.0
+          ],
+          "source": "visual_ai",
+          "evidence_score": 0.88,
+          "kwic_snippet": "EXPEDIENTE: 12 meses"
+        }
+      ]
     },
     {
       "numero_pagina": 6,
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 303.83,
+      "duracion_ms": 11908.95,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -140,14 +141,29 @@
           "contenido_decodificado": null
         }
       ],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p6_ai_001",
+          "page": 6,
+          "text": "EXPEDIENTE: 12 meses",
+          "bbox": [
+            72.0,
+            150.0,
+            300.0,
+            170.0
+          ],
+          "source": "visual_ai",
+          "evidence_score": 0.88,
+          "kwic_snippet": "EXPEDIENTE: 12 meses"
+        }
+      ]
     },
     {
       "numero_pagina": 7,
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 326.79,
+      "duracion_ms": 12385.64,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -165,14 +181,29 @@
           "contenido_decodificado": null
         }
       ],
-      "evidencias": []
+      "evidencias": [
+        {
+          "evidence_id": "ev_p7_ai_001",
+          "page": 7,
+          "text": "EXPEDIENTE: 12 meses",
+          "bbox": [
+            72.0,
+            150.0,
+            300.0,
+            170.0
+          ],
+          "source": "visual_ai",
+          "evidence_score": 0.88,
+          "kwic_snippet": "EXPEDIENTE: 12 meses"
+        }
+      ]
     },
     {
       "numero_pagina": 8,
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 246.23,
+      "duracion_ms": 238.24,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -197,7 +228,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 308.94,
+      "duracion_ms": 303.66,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -222,7 +253,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 351.37,
+      "duracion_ms": 461.92,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -247,7 +278,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 248.22,
+      "duracion_ms": 244.28,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -272,7 +303,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 362.27,
+      "duracion_ms": 366.97,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -297,7 +328,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 358.29,
+      "duracion_ms": 361.04,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -322,7 +353,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 285.32,
+      "duracion_ms": 268.49,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -347,7 +378,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 380.79,
+      "duracion_ms": 315.77,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -372,7 +403,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 348.02,
+      "duracion_ms": 341.97,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -397,7 +428,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 328.65,
+      "duracion_ms": 300.05,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -422,7 +453,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 325.2,
+      "duracion_ms": 350.84,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -447,7 +478,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 306.9,
+      "duracion_ms": 311.09,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -472,7 +503,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 10.26,
+      "duracion_ms": 9.3,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -482,7 +513,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 253.72,
+      "duracion_ms": 247.04,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -507,7 +538,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 249.25,
+      "duracion_ms": 246.7,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -532,7 +563,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 312.34,
+      "duracion_ms": 316.94,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -557,7 +588,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 280.8,
+      "duracion_ms": 278.8,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -582,7 +613,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 8.57,
+      "duracion_ms": 9.45,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -607,7 +638,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 1.8,
+      "duracion_ms": 0.98,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -617,7 +648,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 9.35,
+      "duracion_ms": 8.78,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -627,7 +658,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 281.33,
+      "duracion_ms": 384.42,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -652,7 +683,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 346.8,
+      "duracion_ms": 337.74,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -677,7 +708,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 9.25,
+      "duracion_ms": 7.45,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -700,31 +731,31 @@
   ],
   "hallazgos": [
     {
-      "parametro": "fecha",
-      "valor": "23 de septiembre de 2026",
-      "confianza": 1.0,
-      "metodo": "spatial_vector",
+      "parametro": "expediente",
+      "valor": "12 meses",
+      "confianza": 0.88,
+      "metodo": "visual_ai",
       "evidencias": [
         {
-          "evidence_id": "ev_p1_002",
-          "page": 1,
-          "text": "FECHA: 23 de septiembre de 2026",
+          "evidence_id": "ev_p5_ai_001",
+          "page": 5,
+          "text": "EXPEDIENTE: 12 meses",
           "bbox": [
-            178.88,
-            354.67,
-            337.47,
-            368.32
+            72.0,
+            150.0,
+            300.0,
+            170.0
           ],
-          "source": "spatial_vector",
-          "evidence_score": 1.0,
-          "kwic_snippet": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+          "source": "visual_ai",
+          "evidence_score": 0.88,
+          "kwic_snippet": "EXPEDIENTE: 12 meses"
         }
       ],
-      "valor_normalizado": "2026-09-23",
-      "formato_detectado": "ISO-8601",
-      "tipo_entidad": "fecha",
-      "divisa": "COP",
-      "kwic_context": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+      "valor_normalizado": "12 meses",
+      "formato_detectado": "TEXT",
+      "tipo_entidad": "texto",
+      "divisa": null,
+      "kwic_context": "EXPEDIENTE: 12 meses"
     },
     {
       "parametro": "nit",
@@ -733,7 +764,7 @@
       "metodo": "spatial_vector",
       "evidencias": [
         {
-          "evidence_id": "ev_p1_003",
+          "evidence_id": "ev_p1_001",
           "page": 1,
           "text": "NIT: 900.482.317-5",
           "bbox": [
@@ -782,17 +813,17 @@
     }
   ],
   "telemetria": {
-    "hash_ms": 1.5,
-    "cache_ms": 1.0,
-    "fitz_ms": 2485.99,
-    "classification_ms": 2485.99,
-    "preprocess_ms": 4146.91,
-    "render_ms": 0.0,
-    "retrieval_ms": 320.11,
-    "gemini_ms": 0.0,
+    "hash_ms": 1.2,
+    "cache_ms": 0.8,
+    "fitz_ms": 2543.6,
+    "classification_ms": 2543.6,
+    "preprocess_ms": 4120.3,
+    "render_ms": 2546.07,
+    "retrieval_ms": 303.66,
+    "gemini_ms": 35085.85,
     "merge_ms": 0.0,
-    "serialization_ms": 3.0,
-    "total_ms": 6963.0
+    "serialization_ms": 2.0,
+    "total_ms": 44609.48
   },
   "resumen_documento": "Expediente de 30 página(s) clasificado como FACTURA con destino a Contabilidad / Cuentas por Pagar.",
   "departamento_sugerido": "Contabilidad / Cuentas por Pagar",
