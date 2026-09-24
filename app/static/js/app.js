@@ -19,12 +19,6 @@ function initDropzone() {
 
     if (!dropzone || !fileInput) return;
 
-    dropzone.addEventListener("click", (e) => {
-        if (e.target !== fileInput) {
-            fileInput.click();
-        }
-    });
-
     ["dragenter", "dragover"].forEach(eventName => {
         dropzone.addEventListener(eventName, (e) => {
             e.preventDefault();

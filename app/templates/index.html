@@ -55,11 +55,11 @@
             <!-- Dropzone Area (Clean and Clickable) -->
             <div class="form-group">
                 <div class="label-with-hint">
-                    <label class="form-label" for="pdf-file-input">Documentos Corporativos Multiformato</label>
+                    <span class="form-label">Documentos Corporativos Multiformato</span>
                     <span class="label-subhint">Puedes subir múltiples archivos a la vez o agregarlos uno a uno</span>
                 </div>
-                <div id="dropzone-area" class="dropzone">
-                    <input type="file" id="pdf-file-input" name="files" accept=".pdf,.xml,.zip,.docx,.png,.jpg,.jpeg,.tiff,.webp,application/pdf" class="file-input" style="display: none;" multiple>
+                <input type="file" id="pdf-file-input" name="files" accept=".pdf,.xml,.zip,.docx,.png,.jpg,.jpeg,.tiff,.webp,application/pdf" class="file-input" multiple>
+                <label id="dropzone-area" class="dropzone" for="pdf-file-input">
                     <div class="dropzone-inner" id="dropzone-prompt">
                         <div class="dropzone-icon">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -77,7 +77,7 @@
                             <span class="format-badge">Imágenes (.png, .jpg)</span>
                         </div>
                     </div>
-                </div>
+                </label>
 
                 <!-- Multi-File Queue Card -->
                 <div class="file-queue-card hidden" id="file-queue-card">

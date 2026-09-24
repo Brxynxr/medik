@@ -3,7 +3,7 @@
   "pipeline_version": "2.2",
   "status": "complete",
   "nivel_cache": "none",
-  "duracion_total_ms": 2330.61,
+  "duracion_total_ms": 2325.21,
   "paginas_totales": 22,
   "paginas_completadas": 22,
   "paginas_pendientes": [],
@@ -13,7 +13,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 5.46,
+      "duracion_ms": 5.64,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -66,7 +66,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 1.7,
+      "duracion_ms": 2.19,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -119,7 +119,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 7.31,
+      "duracion_ms": 5.97,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -144,7 +144,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 123.31,
+      "duracion_ms": 135.29,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -154,7 +154,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 90.13,
+      "duracion_ms": 93.92,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -164,7 +164,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 3.15,
+      "duracion_ms": 1.75,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -217,7 +217,7 @@
       "tipo": "empty",
       "exito": true,
       "error": null,
-      "duracion_ms": 0.59,
+      "duracion_ms": 0.36,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -227,7 +227,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 129.04,
+      "duracion_ms": 123.72,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -237,7 +237,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 2.8,
+      "duracion_ms": 1.87,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -290,7 +290,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 88.32,
+      "duracion_ms": 96.56,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -300,7 +300,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 124.35,
+      "duracion_ms": 123.92,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -310,7 +310,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 128.15,
+      "duracion_ms": 119.4,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -320,7 +320,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 2.68,
+      "duracion_ms": 1.82,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -373,7 +373,7 @@
       "tipo": "empty",
       "exito": true,
       "error": null,
-      "duracion_ms": 0.46,
+      "duracion_ms": 0.34,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -383,7 +383,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 121.89,
+      "duracion_ms": 118.91,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -393,7 +393,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 127.62,
+      "duracion_ms": 119.54,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -403,7 +403,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 1.84,
+      "duracion_ms": 1.75,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -456,7 +456,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 122.33,
+      "duracion_ms": 121.32,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -466,7 +466,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 136.1,
+      "duracion_ms": 129.43,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -476,7 +476,7 @@
       "tipo": "empty",
       "exito": true,
       "error": null,
-      "duracion_ms": 0.39,
+      "duracion_ms": 0.38,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -486,7 +486,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 3.41,
+      "duracion_ms": 1.69,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -539,7 +539,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 121.12,
+      "duracion_ms": 121.15,
       "preprocesado": true,
       "metadatos_visuales": [],
       "evidencias": []
@@ -631,15 +631,15 @@
   "telemetria": {
     "hash_ms": 1.2,
     "cache_ms": 0.8,
-    "fitz_ms": 172.78,
-    "classification_ms": 172.78,
-    "preprocess_ms": 1169.36,
-    "render_ms": 937.37,
-    "retrieval_ms": 41.1,
+    "fitz_ms": 164.79,
+    "classification_ms": 164.79,
+    "preprocess_ms": 1162.14,
+    "render_ms": 942.25,
+    "retrieval_ms": 46.03,
     "gemini_ms": 0.0,
     "merge_ms": 0.0,
     "serialization_ms": 2.0,
-    "total_ms": 2330.61
+    "total_ms": 2325.21
   },
   "resumen_documento": "Expediente de 22 página(s) clasificado como HISTORIA_CLINICA con destino a Salud / Asistencia Médica.",
   "departamento_sugerido": "Salud / Asistencia Médica",

@@ -396,6 +396,8 @@ code, pre {
 
 /* Dropzone */
 .dropzone {
+    display: block;
+    width: 100%;
     border: 2px dashed #cbd5e1;
     border-radius: var(--radius-lg);
     background-color: #f8fafc;
@@ -404,6 +406,7 @@ code, pre {
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
+    user-select: none;
 }
 
 .dropzone:hover, .dropzone.dragover {
@@ -412,7 +415,17 @@ code, pre {
 }
 
 .file-input {
-    display: none !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 .dropzone-inner {

@@ -3,7 +3,7 @@
   "pipeline_version": "2.2",
   "status": "complete",
   "nivel_cache": "none",
-  "duracion_total_ms": 44609.48,
+  "duracion_total_ms": 44664.12,
   "paginas_totales": 30,
   "paginas_completadas": 30,
   "paginas_pendientes": [],
@@ -13,7 +13,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 12.78,
+      "duracion_ms": 11.71,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -38,7 +38,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 14.79,
+      "duracion_ms": 15.89,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -63,7 +63,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 12.16,
+      "duracion_ms": 7.74,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -73,7 +73,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 6.99,
+      "duracion_ms": 6.98,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -83,7 +83,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 11696.53,
+      "duracion_ms": 12122.89,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -123,7 +123,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 11908.95,
+      "duracion_ms": 12037.85,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -163,7 +163,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 12385.64,
+      "duracion_ms": 12497.74,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -203,7 +203,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 238.24,
+      "duracion_ms": 229.36,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -228,7 +228,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 303.66,
+      "duracion_ms": 284.9,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -253,7 +253,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 461.92,
+      "duracion_ms": 315.88,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -278,7 +278,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 244.28,
+      "duracion_ms": 256.87,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -303,7 +303,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 366.97,
+      "duracion_ms": 340.0,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -328,7 +328,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 361.04,
+      "duracion_ms": 329.39,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -353,7 +353,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 268.49,
+      "duracion_ms": 247.91,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -378,7 +378,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 315.77,
+      "duracion_ms": 325.15,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -403,7 +403,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 341.97,
+      "duracion_ms": 324.05,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -428,7 +428,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 300.05,
+      "duracion_ms": 294.61,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -453,7 +453,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 350.84,
+      "duracion_ms": 298.01,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -478,7 +478,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 311.09,
+      "duracion_ms": 291.22,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -503,7 +503,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 9.3,
+      "duracion_ms": 7.65,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -513,7 +513,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 247.04,
+      "duracion_ms": 241.66,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -538,7 +538,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 246.7,
+      "duracion_ms": 251.33,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -563,7 +563,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 316.94,
+      "duracion_ms": 312.87,
       "preprocesado": false,
       "metadatos_visuales": [
         {
@@ -588,7 +588,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 278.8,
+      "duracion_ms": 281.48,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -613,7 +613,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 9.45,
+      "duracion_ms": 9.44,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -638,7 +638,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 0.98,
+      "duracion_ms": 1.99,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -648,7 +648,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 8.78,
+      "duracion_ms": 9.08,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": []
@@ -658,7 +658,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 384.42,
+      "duracion_ms": 278.34,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -683,7 +683,7 @@
       "tipo": "needs_ai",
       "exito": true,
       "error": null,
-      "duracion_ms": 337.74,
+      "duracion_ms": 337.52,
       "preprocesado": true,
       "metadatos_visuales": [
         {
@@ -708,7 +708,7 @@
       "tipo": "local",
       "exito": true,
       "error": null,
-      "duracion_ms": 7.45,
+      "duracion_ms": 7.4,
       "preprocesado": false,
       "metadatos_visuales": [],
       "evidencias": [
@@ -815,15 +815,15 @@
   "telemetria": {
     "hash_ms": 1.2,
     "cache_ms": 0.8,
-    "fitz_ms": 2543.6,
-    "classification_ms": 2543.6,
-    "preprocess_ms": 4120.3,
-    "render_ms": 2546.07,
-    "retrieval_ms": 303.66,
-    "gemini_ms": 35085.85,
+    "fitz_ms": 2385.06,
+    "classification_ms": 2385.06,
+    "preprocess_ms": 3779.78,
+    "render_ms": 2418.19,
+    "retrieval_ms": 259.01,
+    "gemini_ms": 35812.08,
     "merge_ms": 0.0,
     "serialization_ms": 2.0,
-    "total_ms": 44609.48
+    "total_ms": 44664.12
   },
   "resumen_documento": "Expediente de 30 página(s) clasificado como FACTURA con destino a Contabilidad / Cuentas por Pagar.",
   "departamento_sugerido": "Contabilidad / Cuentas por Pagar",

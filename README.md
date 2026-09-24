@@ -107,7 +107,7 @@ Diseñada para resolver integralmente el reto de automatización del buzón corp
 
 ### 1. Clonar y Crear Entorno Virtual
 ```bash
-# Crear entorno virtual con Python 3.12 usando uv
+# Crear entorno virtual con Python 3.12 usando uv (o venv estándar)
 uv venv .venv --python 3.12
 source .venv/bin/activate
 ```
@@ -115,28 +115,37 @@ source .venv/bin/activate
 ### 2. Instalar Dependencias
 ```bash
 uv pip install -r requirements.txt
+# O alternativamente con pip:
+# pip install -r requirements.txt
 ```
 
 ### 3. Configurar Variables de Entorno (Opcional)
-Copia el archivo de ejemplo y configura tu clave de Gemini si deseas aceleración de visión:
+Copia el archivo de ejemplo y configura tu clave de Gemini si deseas aceleración de visión y asistente de chat avanzado:
 ```bash
 cp .env.example .env
 ```
-*(También puedes ingresar tu clave directamente en la interfaz gráfica de Streamlit).*
 
-### 4. Ejecutar la Aplicación Web
+### 4. Ejecutar la Aplicación Web (FastAPI + Visor en Tiempo Real)
 ```bash
-streamlit run main.py
+python main.py
 ```
-Abre tu navegador en `http://localhost:8501`.
+O directamente con Uvicorn:
+```bash
+uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+```
+Abre tu navegador en: **`http://localhost:8000`**
 
 ---
 
-## 🧪 Pruebas Automatizadas
+## 🧪 Pruebas Automatizadas y Calidad
 
-Para ejecutar la suite completa de pruebas unitarias e integración:
+Para ejecutar la suite completa de pruebas unitarias, benchmarks e integración del motor FastAPI:
 ```bash
-python3 -m unittest tests/test_pipeline.py -v
+# 1. Pruebas de integración web, endpoints y chat:
+pytest tests/test_fastapi_engine.py -v
+
+# 2. Pruebas del pipeline de procesamiento, DIAN XML y caché:
+pytest tests/test_pipeline.py -v
 ```
 
 ---
