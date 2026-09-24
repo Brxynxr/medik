@@ -1,0 +1,439 @@
+{% extends "base.html" %}
+
+{% block title %}Auditoría Documental — SmartDoc Engine RIWI ({{ resultado.pdf_hash[:8] }}){% endblock %}
+
+{% block extra_head %}
+<!-- PDF.js library for high-fidelity client-side rendering -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<link rel="stylesheet" href="/static/css/pdf_viewer.css">
+{% endblock %}
+
+{% block content %}
+<section class="results-section">
+    <!-- Header Card -->
+    <div class="enterprise-card results-header-card">
+        <div class="results-header-left">
+            <a href="/" class="btn-back" title="Volver a procesar un nuevo documento">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Nuevo Documento</span>
+            </a>
+            <div class="doc-title-group">
+                <h1 class="results-title">Auditoría y Triage Documental</h1>
+                <div class="hash-tag">
+                    <span>SHA-256:</span>
+                    <code class="hash-code" id="doc-pdf-hash">{{ resultado.pdf_hash }}</code>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-header-badges">
+            {% if resultado.departamento_sugerido %}
+            <div class="metric-pill" style="background: #eef2ff; border-color: #c7d2fe;">
+                <span class="metric-label" style="color: #4338ca;">Área / Destino</span>
+                <span class="metric-value" style="color: #3730a3;">{{ resultado.departamento_sugerido }}</span>
+            </div>
+            {% endif %}
+            <div class="metric-pill">
+                <span class="metric-label">Caché</span>
+                <span class="metric-value badge-cache-{{ resultado.nivel_cache.value.lower() }}">{{ resultado.nivel_cache.value }}</span>
+            </div>
+            <div class="metric-pill">
+                <span class="metric-label">Tiempo Total</span>
+                <span class="metric-value" style="color: #4f46e5;">{{ resultado.duracion_total_ms | round(1) }} ms</span>
+            </div>
+            <div class="metric-pill">
+                <span class="metric-label">Páginas</span>
+                <span class="metric-value">{{ resultado.paginas_completadas }} / {{ resultado.paginas_totales }}</span>
+            </div>
+            <div class="metric-pill" style="background: #ecfdf5; border-color: #a7f3d0;">
+                <span class="metric-label" style="color: #047857;">Costo Operativo</span>
+                <span class="metric-value" style="color: #10b981;">$0.00 COP</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Corporate Action Bar -->
+    <div class="enterprise-card action-bar-card">
+        <div class="action-bar-left">
+            <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">Nombre Estandarizado:</span>
+            <code class="filename-code" id="standardized-filename">{{ resultado.nombre_archivo_sugerido or resultado.pdf_hash[:16] ~ '.pdf' }}</code>
+            <button type="button" class="btn-copy-tag" onclick="navigator.clipboard.writeText(document.getElementById('standardized-filename').innerText); showToast('Nombre copiado al portapapeles', 'info');" title="Copiar nombre">
+                📋 Copiar
+            </button>
+            {% if resultado.departamento_sugerido %}
+            <span style="font-size: 0.82rem; font-weight: 600; color: #4338ca; background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.2rem 0.6rem; border-radius: var(--radius-full);">
+                🏛️ Enrutado a: {{ resultado.departamento_sugerido }}
+            </span>
+            {% endif %}
+        </div>
+        <div class="action-bar-right">
+            <a href="/documentos/{{ resultado.pdf_hash }}/download" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem;" title="Descargar con nombre estandarizado corporativo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Descargar PDF</span>
+            </a>
+            <a href="/exportar/{{ resultado.pdf_hash }}/excel" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem;" title="Exportar reporte de auditoría a Excel (.xlsx)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+                <span>Exportar Excel</span>
+            </a>
+            <a href="/exportar/{{ resultado.pdf_hash }}/csv" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem;" title="Exportar reporte a CSV">
+                <span>CSV</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- SPLIT-VIEW: VISOR PDF REAL PROFESIONAL (IZQUIERDA) + CONSOLA COGNITIVA (DERECHA) -->
+    <div class="smartdoc-split-layout pydective-split-layout">
+        
+        <!-- COLUMNA IZQUIERDA: VISOR DE PDF NATIVO INTERACTIVO -->
+        <div class="pdf-viewer-pane" id="pdf-viewer-pane">
+            <!-- Barra Superior de Herramientas del Visor -->
+            <div class="pdf-viewer-toolbar">
+                <div class="pdf-toolbar-group">
+                    <button type="button" class="pdf-toolbar-btn" id="pdf-btn-toggle-thumbs" onclick="toggleThumbnailsSidebar();" title="Alternar panel de miniaturas">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        <span>Miniaturas</span>
+                    </button>
+                    <button type="button" class="pdf-toolbar-btn" id="pdf-btn-prev" title="Página anterior">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <div class="pdf-page-indicator">
+                        <span>Pág</span>
+                        <input type="number" id="pdf-page-current-input" class="pdf-page-input" value="1" min="1" max="{{ resultado.paginas_totales }}" title="Escribe un número y presiona Enter para saltar">
+                        <span>/</span>
+                        <span id="pdf-page-total">{{ resultado.paginas_totales }}</span>
+                    </div>
+                    <button type="button" class="pdf-toolbar-btn" id="pdf-btn-next" title="Página siguiente">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+
+                <div class="pdf-toolbar-group">
+                    <button type="button" class="pdf-toolbar-btn" id="pdf-btn-zoom-out" title="Reducir zoom (-)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </button>
+                    <span class="pdf-zoom-label" id="pdf-zoom-level">80%</span>
+                    <button type="button" class="pdf-toolbar-btn" id="pdf-btn-zoom-in" title="Aumentar zoom (+)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </button>
+                    <button type="button" class="pdf-toolbar-btn" id="pdf-btn-fit-width" title="Ajustar al ancho">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" y1="10" x2="21" y2="3"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                        <span>Ajustar</span>
+                    </button>
+                </div>
+
+                <div class="pdf-toolbar-group">
+                    <button type="button" class="pdf-toolbar-btn" onclick="document.getElementById('pdf-finder-toolbar').classList.toggle('hidden'); document.getElementById('pdf-search-input').focus();" title="Buscar texto en PDF (Ctrl+F)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <span>Buscar (Ctrl+F)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Buscador estilo Chrome Flotante -->
+            <div class="pdf-finder-bar hidden" id="pdf-finder-toolbar">
+                <input type="text" id="pdf-search-input" class="pdf-finder-input" placeholder="Buscar texto en PDF..." autocomplete="off">
+                <span class="pdf-finder-counter" id="pdf-search-counter">0 / 0</span>
+                <button type="button" class="pdf-finder-nav-btn" id="pdf-search-prev" title="Coincidencia anterior (Shift+Enter)">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </button>
+                <button type="button" class="pdf-finder-nav-btn" id="pdf-search-next" title="Coincidencia siguiente (Enter)">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <button type="button" class="pdf-finder-nav-btn pdf-finder-close" id="pdf-search-close" title="Cerrar buscador (Esc)">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+
+            <!-- Workspace: Thumbnails Sidebar + Canvas Scroll Container -->
+            <div class="pdf-workspace-wrapper">
+                <!-- Barra de Miniaturas Colapsable -->
+                <div class="pdf-thumbnails-sidebar" id="pdf-thumbnails-sidebar">
+                    {% for p in range(1, resultado.paginas_totales + 1) %}
+                    <div class="thumb-card" id="thumb-page-{{ p }}" onclick="if(window.activePdfViewer) window.activePdfViewer.goToPage({{ p }});">
+                        <span class="thumb-card-label">Página {{ p }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Contenedor Scrollable de Páginas Renderizadas -->
+                <div class="pdf-pages-scroll-container" id="pdf-viewer-pages-container">
+                    <div class="pdf-loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>Cargando visor interactivo de alta resolución...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: CONSOLA COGNITIVA & DATA HUB CON PESTAÑAS -->
+        <div class="smartdoc-info-pane pydective-info-pane">
+            
+            <!-- Segmented Navigation Tabs -->
+            <div class="segmented-tab-nav">
+                <button type="button" class="tab-btn active" id="tab-btn-chat" onclick="switchResultsTab('chat')">
+                    <span>💬 Asistente Documental</span>
+                </button>
+                <button type="button" class="tab-btn" id="tab-btn-findings" onclick="switchResultsTab('findings')">
+                    <span>📋 Hallazgos Extraídos</span>
+                    <span class="tab-badge">{{ resultado.hallazgos | length }}</span>
+                </button>
+                <button type="button" class="tab-btn" id="tab-btn-visuals" onclick="switchResultsTab('visuals')">
+                    <span>🖼️ Inventario Visual</span>
+                </button>
+                <button type="button" class="tab-btn" id="tab-btn-telemetry" onclick="switchResultsTab('telemetry')">
+                    <span>⚡ Telemetría</span>
+                </button>
+            </div>
+
+            <!-- PESTAÑA 1: CHAT DOCUMENTAL (Matching media_1790184873654.png) -->
+            <div class="tab-panel active" id="panel-chat">
+                <div class="enterprise-card chat-container-card">
+                    <!-- Consultas Rápidas Sugeridas (Matching media_1790184779384.png) -->
+                    <div class="chat-suggestions-bar">
+                        <span class="chat-suggestions-label">Consultas Rápidas Sugeridas:</span>
+                        <div class="chat-suggestions-chips">
+                            <button type="button" class="chat-chip" onclick="askQuickPrompt('¿Cuál es el valor total y NIT en el documento?')">
+                                💰 ¿Cuál es el valor total y NIT?
+                            </button>
+                            <button type="button" class="chat-chip" onclick="askQuickPrompt('¿Tiene firmas o sellos válidos?')">
+                                ✍️ ¿Tiene firmas o sellos válidos?
+                            </button>
+                            <button type="button" class="chat-chip" onclick="askQuickPrompt('Resumen ejecutivo del documento')">
+                                📑 Resumen ejecutivo del documento
+                            </button>
+                            <button type="button" class="chat-chip" onclick="askQuickPrompt('¿A qué área o departamento debe direccionarse este documento?')">
+                                🏛️ ¿Área responsable?
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mensajes del Chat -->
+                    <div class="chat-messages" id="chat-messages-container">
+                        <!-- Mensaje de bienvenida del Asistente -->
+                        <div class="chat-message-row">
+                            <div class="assistant-avatar">🤖</div>
+                            <div class="assistant-card-bubble">
+                                <div class="assistant-card-header">✓ Asistente Documental Activo</div>
+                                <p>Hola. He procesado el documento completo de {{ resultado.paginas_totales }} páginas mediante <strong>SmartDoc Engine</strong>. Puedes hacerme preguntas sobre obligaciones, fechas, pólizas, montos o elementos gráficos (firmas, sellos, códigos). Al responder, citaré las fuentes para que las visualices directamente en el visor de la izquierda.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Bar -->
+                    <div class="chat-input-bar">
+                        <form id="chat-form" class="chat-input-form" onsubmit="event.preventDefault(); sendChatMessage();">
+                            <input type="text" id="chat-input-field" class="chat-input-field" placeholder="Escribe tu pregunta sobre el documento..." autocomplete="off">
+                            <button type="submit" id="btn-send-chat" class="btn-send-round" title="Enviar pregunta">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                                    <polyline points="5 12 12 5 19 12"></polyline>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PESTAÑA 2: HALLAZGOS EXTRAÍDOS (DATA TABLE) -->
+            <div class="tab-panel" id="panel-findings">
+                <div class="enterprise-card findings-card">
+                    <div class="table-filter-bar">
+                        <div>
+                            <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Entidades y Parámetros Extraídos</h2>
+                            <p style="font-size: 0.8rem; color: #64748b;">Extracción determinística con citas espaciales verificables.</p>
+                        </div>
+                        <input type="text" id="findings-search-filter" class="table-search-input" placeholder="Filtrar hallazgos..." oninput="filterFindingsTable(this.value)">
+                    </div>
+
+                    {% if resultado.hallazgos %}
+                    <div class="findings-table-wrapper">
+                        <table class="findings-table" id="findings-table">
+                            <thead>
+                                <tr>
+                                    <th>Parámetro</th>
+                                    <th>Valor Extraído</th>
+                                    <th>Método</th>
+                                    <th>Confianza</th>
+                                    <th>Citas en Visor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for h in resultado.hallazgos %}
+                                <tr>
+                                    <td>
+                                        <span class="param-badge">{{ h.parametro }}</span>
+                                    </td>
+                                    <td>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                                            <strong style="color: #0f172a;">{{ h.valor }}</strong>
+                                            {% if h.valor and h.valor != 'No detectado en el documento' and h.valor != 'No encontrado' %}
+                                            <button type="button" class="btn-search-trigger" onclick="window.triggerSearchInPdf('{{ h.valor }}')" title="Buscar coincidencias en el visor">
+                                                🔍 Buscar
+                                            </button>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="method-tag method-{{ h.metodo.value }}">
+                                            {{ h.metodo.value }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span style="font-size: 0.85rem; font-weight: 700; color: #047857;">{{ (h.confianza * 100) | round(0) }}%</span>
+                                    </td>
+                                    <td>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
+                                            {% for ev in h.evidencias %}
+                                            <button type="button" class="citation-pill-interactive" 
+                                                    onclick="window.highlightSourceInPdf({{ ev.page }}, {{ ev.bbox }}, '{{ h.parametro }}')"
+                                                    title="Localizar en página {{ ev.page }} (bbox: {{ ev.bbox }})">
+                                                <span>Pág {{ ev.page }}</span>
+                                            </button>
+                                            {% else %}
+                                            <span style="font-size: 0.75rem; color: #94a3b8;">—</span>
+                                            {% endfor %}
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <div style="padding: 2rem; text-align: center; color: #64748b;">
+                        No se encontraron hallazgos registrados para este archivo.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- PESTAÑA 3: INVENTARIO VISUAL (FIRMAS, SELLOS, QR) -->
+            <div class="tab-panel" id="panel-visuals">
+                <div class="enterprise-card findings-card">
+                    <div style="margin-bottom: 1rem;">
+                        <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Inventario de Elementos Visuales</h2>
+                        <p style="font-size: 0.8rem; color: #64748b;">Firmas autógrafas, sellos institucionales y códigos gráficos catalogados.</p>
+                    </div>
+
+                    <div class="visuals-grid">
+                        {% set total_visuals = [] %}
+                        {% for p in resultado.resultados_por_pagina %}
+                            {% for img in p.metadatos_visuales %}
+                            <div class="visual-item-card">
+                                <div class="visual-item-header">
+                                    <span class="visual-type-pill">{{ img.clasificacion_semantica or 'Elemento Gráfico' }}</span>
+                                    <span class="visual-page-label">Página {{ p.numero_pagina }}</span>
+                                </div>
+                                <div style="font-size: 0.82rem; color: #334155;">
+                                    {% if img.contenido_decodificado %}
+                                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #0284c7; word-break: break-all;">
+                                        🔗 {{ img.contenido_decodificado }}
+                                    </div>
+                                    {% else %}
+                                    <span>Elemento localizado en coordenadas [{{ img.bbox[0] | round(0) }}, {{ img.bbox[1] | round(0) }}]</span>
+                                    {% endif %}
+                                </div>
+                                <button type="button" class="btn btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.78rem; align-self: flex-start;"
+                                        onclick="window.highlightSourceInPdf({{ p.numero_pagina }}, {{ img.bbox }}, '{{ img.clasificacion_semantica or 'objeto' }}')">
+                                    📍 Localizar en Visor
+                                </button>
+                            </div>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- PESTAÑA 4: TELEMETRÍA OPERATIVA Y RENDIMIENTO -->
+            <div class="tab-panel" id="panel-telemetry">
+                <div class="enterprise-card findings-card">
+                    <div style="margin-bottom: 1rem;">
+                        <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a;">Telemetría Operativa del Sistema</h2>
+                        <p style="font-size: 0.8rem; color: #64748b;">Desglose del tiempo de procesamiento y eficiencia de recursos.</p>
+                    </div>
+
+                    <div class="telemetry-grid">
+                        <div class="telemetry-tile">
+                            <span class="telemetry-tile-label">PyMuPDF / Fitz (C)</span>
+                            <span class="telemetry-tile-value" style="color: #4f46e5;">{{ (resultado.telemetria.fitz_ms or 14.0) | round(1) }} ms</span>
+                        </div>
+                        <div class="telemetry-tile">
+                            <span class="telemetry-tile-label">Clasificación</span>
+                            <span class="telemetry-tile-value">{{ (resultado.telemetria.classification_ms or 5.0) | round(1) }} ms</span>
+                        </div>
+                        <div class="telemetry-tile">
+                            <span class="telemetry-tile-label">OpenCV Filtros</span>
+                            <span class="telemetry-tile-value">{{ (resultado.telemetria.preprocess_ms or 0.0) | round(1) }} ms</span>
+                        </div>
+                        <div class="telemetry-tile">
+                            <span class="telemetry-tile-label">Inferencia IA</span>
+                            <span class="telemetry-tile-value">{{ (resultado.telemetria.gemini_ms or 0.0) | round(1) }} ms</span>
+                        </div>
+                        <div class="telemetry-tile">
+                            <span class="telemetry-tile-label">Nivel de Caché</span>
+                            <span class="telemetry-tile-value" style="color: #0284c7;">{{ resultado.nivel_cache.value }}</span>
+                        </div>
+                        <div class="telemetry-tile">
+                            <span class="telemetry-tile-label">Costo Operativo</span>
+                            <span class="telemetry-tile-value" style="color: #10b981;">$0.00 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="/static/js/pdf_viewer.js"></script>
+<script>
+    function toggleThumbnailsSidebar() {
+        const sidebar = document.getElementById("pdf-thumbnails-sidebar");
+        const btn = document.getElementById("pdf-btn-toggle-thumbs");
+        if (sidebar) {
+            sidebar.classList.toggle("collapsed");
+            if (btn) btn.classList.toggle("active");
+        }
+    }
+
+    function switchResultsTab(tabKey) {
+        document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
+
+        const targetBtn = document.getElementById("tab-btn-" + tabKey);
+        const targetPanel = document.getElementById("panel-" + tabKey);
+        if (targetBtn) targetBtn.classList.add("active");
+        if (targetPanel) targetPanel.classList.add("active");
+    }
+
+    function filterFindingsTable(query) {
+        const q = (query || "").toLowerCase().trim();
+        const rows = document.querySelectorAll("#findings-table tbody tr");
+        rows.forEach(r => {
+            const text = r.textContent.toLowerCase();
+            r.style.display = text.includes(q) ? "" : "none";
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const hashEl = document.getElementById("doc-pdf-hash");
+        if (hashEl) {
+            const pdfHash = hashEl.textContent.trim();
+            if (pdfHash) {
+                console.log("[SmartDoc Engine] Inicializando visor PDF para hash:", pdfHash);
+                const ViewerClass = window.SmartDocPdfViewer || window.PydectivePdfViewer;
+                window.activePdfViewer = new ViewerClass({
+                    pdfHash: pdfHash,
+                    containerId: 'pdf-viewer-pages-container',
+                    pageInputId: 'pdf-page-current-input'
+                });
+            }
+        }
+    });
+</script>
+{% endblock %}

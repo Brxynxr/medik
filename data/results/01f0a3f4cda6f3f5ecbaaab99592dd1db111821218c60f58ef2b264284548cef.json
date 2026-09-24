@@ -1,0 +1,800 @@
+{
+  "pdf_hash": "01f0a3f4cda6f3f5ecbaaab99592dd1db111821218c60f58ef2b264284548cef",
+  "pipeline_version": "2.2",
+  "status": "complete",
+  "nivel_cache": "none",
+  "duracion_total_ms": 6963.0,
+  "paginas_totales": 30,
+  "paginas_completadas": 30,
+  "paginas_pendientes": [],
+  "resultados_por_pagina": [
+    {
+      "numero_pagina": 1,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 7.64,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_002",
+          "page": 1,
+          "text": "FECHA: 23 de septiembre de 2026",
+          "bbox": [
+            178.88,
+            354.67,
+            337.47,
+            368.32
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+        },
+        {
+          "evidence_id": "ev_p1_003",
+          "page": 1,
+          "text": "NIT: 900.482.317-5",
+          "bbox": [
+            86.33,
+            302.7,
+            174.35,
+            316.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 2,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 9.64,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p2_001",
+          "page": 2,
+          "text": "TOTAL: $ 4.872.310.500",
+          "bbox": [
+            137.52,
+            313.67,
+            253.75,
+            325.22
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "Ventas totales 2026: $ 4.872.310.500 Crecimiento anual: 12,7 % Margen bruto: 31,4 % Clientes activos: 1.264 Como referencia, las ventas totales 2025 fueron de $ 4.323.118.900, cifra que sirve de base para calcular el crecimiento."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 3,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 9.53,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 4,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 7.04,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 5,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 354.76,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p5_1_1",
+          "pagina": 5,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 6,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 303.83,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p6_1_1",
+          "pagina": 6,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 7,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 326.79,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p7_1_1",
+          "pagina": 7,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 8,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 246.23,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p8_1_1",
+          "pagina": 8,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 9,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 308.94,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p9_1_1",
+          "pagina": 9,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 10,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 351.37,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p10_1_1",
+          "pagina": 10,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 11,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 248.22,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p11_1_1",
+          "pagina": 11,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 12,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 362.27,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p12_1_1",
+          "pagina": 12,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 13,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 358.29,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p13_1_1",
+          "pagina": 13,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 14,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 285.32,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p14_1_1",
+          "pagina": 14,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 15,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 380.79,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p15_1_1",
+          "pagina": 15,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 16,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 348.02,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p16_1_1",
+          "pagina": 16,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 17,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 328.65,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p17_1_1",
+          "pagina": 17,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 18,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 325.2,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p18_1_1",
+          "pagina": 18,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 19,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 306.9,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p19_1_1",
+          "pagina": 19,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 20,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 10.26,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 21,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 253.72,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p21_1_1",
+          "pagina": 21,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 22,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 249.25,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p22_1_1",
+          "pagina": 22,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 23,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 312.34,
+      "preprocesado": false,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p23_1_1",
+          "pagina": 23,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 24,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 280.8,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p24_1_1",
+          "pagina": 24,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 25,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 8.57,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p25_001",
+          "page": 25,
+          "text": "TOTAL: $ 3.980.000",
+          "bbox": [
+            86.8,
+            359.21,
+            197.86,
+            370.76
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "Total anterior: $ 3.980.000 Total actual: $ 4.410.000 Variación: 10,8 % Nota: el total actual incluye impuestos y fletes; el total anterior corresponde al periodo previo."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 26,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 1.8,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 27,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 9.35,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 28,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 281.33,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p28_1_1",
+          "pagina": 28,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 29,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 346.8,
+      "preprocesado": true,
+      "metadatos_visuales": [
+        {
+          "id_imagen": "img_p29_1_1",
+          "pagina": 29,
+          "tipo_fisico": "raster",
+          "bbox": [
+            0.0,
+            0.0,
+            595.28,
+            841.89
+          ],
+          "area_ratio": 1.0,
+          "clasificacion_semantica": "diagrama",
+          "contenido_decodificado": null
+        }
+      ],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 30,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 9.25,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p30_001",
+          "page": 30,
+          "text": "TOTAL: 30",
+          "bbox": [
+            86.8,
+            340.02,
+            232.49,
+            351.57
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "51B-120, Barranquilla Teléfono comercial: (605) 555-0143 Aprobado por: Ricardo Vélez Cargo: Gerente General Total de páginas del informe: 30 El sistema de gestión documental permite consultar los registros históricos y verificar el cumplimi..."
+        }
+      ]
+    }
+  ],
+  "hallazgos": [
+    {
+      "parametro": "fecha",
+      "valor": "23 de septiembre de 2026",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_002",
+          "page": 1,
+          "text": "FECHA: 23 de septiembre de 2026",
+          "bbox": [
+            178.88,
+            354.67,
+            337.47,
+            368.32
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+        }
+      ],
+      "valor_normalizado": "2026-09-23",
+      "formato_detectado": "ISO-8601",
+      "tipo_entidad": "fecha",
+      "divisa": "COP",
+      "kwic_context": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+    },
+    {
+      "parametro": "nit",
+      "valor": "900.482.317-5",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_003",
+          "page": 1,
+          "text": "NIT: 900.482.317-5",
+          "bbox": [
+            86.33,
+            302.7,
+            174.35,
+            316.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+        }
+      ],
+      "valor_normalizado": "900482317-5",
+      "formato_detectado": "NIT",
+      "tipo_entidad": "nit",
+      "divisa": "COP",
+      "kwic_context": "NIT: 900.482.317-5 Código de informe: INF-2026-0923 Fecha de emisión: 23 de septiembre de 2026 Responsable del informe: Laura Beltrán Ospina La capacitación del personal operativo se concentró en el manejo seguro de la mercancía y en el uso..."
+    },
+    {
+      "parametro": "total",
+      "valor": "$ 4.872.310.500",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p2_001",
+          "page": 2,
+          "text": "TOTAL: $ 4.872.310.500",
+          "bbox": [
+            137.52,
+            313.67,
+            253.75,
+            325.22
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "Ventas totales 2026: $ 4.872.310.500 Crecimiento anual: 12,7 % Margen bruto: 31,4 % Clientes activos: 1.264 Como referencia, las ventas totales 2025 fueron de $ 4.323.118.900, cifra que sirve de base para calcular el crecimiento."
+        }
+      ],
+      "valor_normalizado": "4872310500.00",
+      "formato_detectado": "COP",
+      "tipo_entidad": "moneda",
+      "divisa": "COP",
+      "kwic_context": "Ventas totales 2026: $ 4.872.310.500 Crecimiento anual: 12,7 % Margen bruto: 31,4 % Clientes activos: 1.264 Como referencia, las ventas totales 2025 fueron de $ 4.323.118.900, cifra que sirve de base para calcular el crecimiento."
+    }
+  ],
+  "telemetria": {
+    "hash_ms": 1.5,
+    "cache_ms": 1.0,
+    "fitz_ms": 2485.99,
+    "classification_ms": 2485.99,
+    "preprocess_ms": 4146.91,
+    "render_ms": 0.0,
+    "retrieval_ms": 320.11,
+    "gemini_ms": 0.0,
+    "merge_ms": 0.0,
+    "serialization_ms": 3.0,
+    "total_ms": 6963.0
+  },
+  "resumen_documento": "Expediente de 30 página(s) clasificado como FACTURA con destino a Contabilidad / Cuentas por Pagar.",
+  "departamento_sugerido": "Contabilidad / Cuentas por Pagar",
+  "nombre_archivo_sugerido": "20260924_FACTURA_9004823175.pdf"
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SmartDoc Engine — Buzón Corporativo Inteligente RIWI{% endblock %}</title>
+    <meta name="description" content="SmartDoc Engine: Buzón Corporativo Inteligente de RIWI. Triage automatizado, clasificación determinística DIAN UBL 2.1, escaneo de alta resolución y asistente cognitivo con visor en tiempo real.">
+    
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand-logo" id="nav-brand-logo" title="SmartDoc Engine — Buzón Corporativo RIWI">
+                <div class="brand-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <div style="display: flex; align-items: center; gap: 0.45rem;">
+                        <span class="brand-name">SmartDoc</span>
+                        <span style="font-weight: 400; font-size: 1.1rem; color: #64748b;">Engine</span>
+                        <span class="brand-badge">Buzón RIWI</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="nav-status-group">
+                <div class="status-pill status-active" id="engine-status-pill" title="Servicio en línea y listo para recibir archivos">
+                    <span class="status-dot"></span>
+                    <span>Buzón Activo</span>
+                </div>
+                <div class="status-pill status-info" title="Caché de triple nivel: RAM (L0), SQLite (L1) y Semántica (L2)">
+                    <span>Caché L0/L1/L2</span>
+                </div>
+                <div class="status-pill status-success" title="Cero costo por inferencia garantizado ($0.00 COP)">
+                    <span>$0.00 COP</span>
+                </div>
+                <div class="status-pill status-secondary" id="model-status-pill" title="Motores de IA interna">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <span>Gemini 2.0 / Groq</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <span class="footer-title">SmartDoc Engine — Buzón Corporativo RIWI</span>
+                <p class="footer-desc">
+                    Plataforma institucional de triage, clasificación determinística DIAN UBL 2.1 (0.002s), preprocesamiento morfológico OpenCV, indexación de texto nativo en C (PyMuPDF) y razonamiento cognitivo multimodal.
+                </p>
+            </div>
+            <div class="footer-specs">
+                <div class="spec-item">
+                    <span class="spec-label">Presupuesto L0</span>
+                    <span class="spec-value">&lt; 20 ms</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">DIAN XML / ZIP</span>
+                    <span class="spec-value">&lt; 50 ms</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Visor PDF.js</span>
+                    <span class="spec-value">Tiempo Real</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Costo Operativo</span>
+                    <span class="spec-value" style="color: #10b981;">$0.00 COP</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="/static/js/app.js"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

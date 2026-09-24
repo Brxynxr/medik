@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}SmartDoc Engine — Buzón Corporativo Inteligente RIWI{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-pill">
+            <span class="hero-pill-badge">🏛️ Buzón Corporativo RIWI</span>
+            <span>Facturación DIAN • Contratos • Actas • PQR • Finanzas</span>
+        </div>
+        <h1 class="hero-title">
+            Inteligencia Documental y <span class="gradient-text">Buzón Corporativo RIWI</span>
+        </h1>
+        <p class="hero-subtitle">
+            Recepción de documentos multiformato, clasificación determinística DIAN UBL 2.1 (0.002s), preprocesamiento morfológico OpenCV, inventario visual de firmas y sellos, y asistente cognitivo con costo operativo de $0.00 COP.
+        </p>
+    </div>
+
+    <!-- Highlight Operational Stats -->
+    <div class="hero-stats-row">
+        <div class="hero-stat-card">
+            <div class="hero-stat-icon">⚡</div>
+            <div class="hero-stat-details">
+                <span class="hero-stat-value">0.002s</span>
+                <span class="hero-stat-label">Clasificación DIAN</span>
+            </div>
+        </div>
+        <div class="hero-stat-card">
+            <div class="hero-stat-icon">📑</div>
+            <div class="hero-stat-details">
+                <span class="hero-stat-value">Hasta 100 págs</span>
+                <span class="hero-stat-label">Capacidad Multipágina</span>
+            </div>
+        </div>
+        <div class="hero-stat-card">
+            <div class="hero-stat-icon">🛡️</div>
+            <div class="hero-stat-details">
+                <span class="hero-stat-value">Doble Caché</span>
+                <span class="hero-stat-label">L0 RAM + L1 Disco</span>
+            </div>
+        </div>
+        <div class="hero-stat-card">
+            <div class="hero-stat-icon">🏷️</div>
+            <div class="hero-stat-details">
+                <span class="hero-stat-value">{FECHA}_{CAT}_{ID}</span>
+                <span class="hero-stat-label">Renombrado Institucional</span>
+            </div>
+        </div>
+        <div class="hero-stat-card">
+            <div class="hero-stat-icon" style="background: #ecfdf5; color: #10b981;">💰</div>
+            <div class="hero-stat-details">
+                <span class="hero-stat-value" style="color: #047857;">$0.00 COP</span>
+                <span class="hero-stat-label">Cero Costo Operativo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Intake Form Card -->
+    <div class="enterprise-card form-card">
+        <form id="upload-form" class="upload-form" onsubmit="event.preventDefault(); submitJob();">
+            <!-- Dropzone Area (Supports Multiple Files & Incremental Upload) -->
+            <div class="form-group">
+                <div class="label-with-hint">
+                    <label class="form-label" for="pdf-file-input">Documentos Corporativos Multiformato</label>
+                    <span class="label-subhint">Puedes subir múltiples archivos a la vez o agregarlos uno a uno</span>
+                </div>
+                <div id="dropzone-area" class="dropzone">
+                    <input type="file" id="pdf-file-input" name="files" accept=".pdf,.xml,.zip,.docx,.png,.jpg,.jpeg,.tiff,.webp,application/pdf" class="file-input" multiple>
+                    <div class="dropzone-inner" id="dropzone-prompt">
+                        <div class="dropzone-icon">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <span class="dropzone-title">Arrastra uno o varios documentos aquí o haz clic para examinar</span>
+                        <span class="dropzone-hint">Carga individual o en lote (.pdf, .zip, .xml, .docx, imágenes):</span>
+                        <div class="format-badges-row">
+                            <span class="format-badge">PDF Multipágina (hasta 100 págs)</span>
+                            <span class="format-badge">Factura Electrónica DIAN (ZIP / XML UBL 2.1)</span>
+                            <span class="format-badge">Documentos Word (.docx)</span>
+                            <span class="format-badge">Imágenes (.png, .jpg)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-File Queue Card -->
+                <div class="file-queue-card hidden" id="file-queue-card">
+                    <div class="file-queue-header">
+                        <div class="file-queue-title">
+                            <span>📁 Documentos en Cola</span>
+                            <span class="file-queue-count" id="queue-count-badge">0</span>
+                        </div>
+                        <div class="file-queue-actions">
+                            <button type="button" class="btn-queue-action" onclick="document.getElementById('pdf-file-input').click()">
+                                <span>+ Agregar más archivos</span>
+                            </button>
+                            <button type="button" class="btn-queue-action" onclick="clearFileQueue()">
+                                <span>Vaciar cola</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="file-queue-list" id="file-queue-list">
+                        <!-- Generado dinámicamente por JS -->
+                    </div>
+                </div>
+
+                <!-- Resumen de Lote Procesado -->
+                <div class="batch-summary-card hidden" id="batch-summary-container">
+                    <!-- Generado dinámicamente al finalizar lote -->
+                </div>
+            </div>
+
+            <!-- Parameters Section -->
+            <div class="form-group">
+                <div class="label-with-hint">
+                    <label class="form-label" for="param-input">Parámetros a Extraer (Entidades / Claves Corporativas)</label>
+                    <span class="label-subhint">Presiona Enter o haz clic en Agregar</span>
+                </div>
+
+                <div class="param-input-wrapper">
+                    <input type="text" id="param-input" class="text-input" placeholder="Ej: total, arrendador, fecha de vencimiento, nit, diagnóstico..." autocomplete="off">
+                    <button type="button" id="btn-add-param" class="btn btn-secondary">
+                        <span>+ Agregar</span>
+                    </button>
+                </div>
+
+                <!-- Preset Chips Quick Selection (matching media_1790184779384.png) -->
+                <div class="preset-chips-group">
+                    <span class="presets-label">Sugeridos:</span>
+                    <div class="chips-container" id="preset-chips">
+                        <button type="button" class="preset-chip" onclick="addParamTag('total')">💰 Total Facturado</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('fecha')">📅 Fecha Emisión</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('nit')">🆔 NIT / Cédula</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('emisor')">🏢 Emisor / Proveedor</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('departamento')">🏛️ Área Destino</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('firmas')">✍️ Firmas y Sellos</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('clausula')">⚖️ Cláusula Penal</button>
+                        <button type="button" class="preset-chip" onclick="addParamTag('vigencia')">📑 Vigencia / Plazo</button>
+                    </div>
+                </div>
+
+                <!-- Active Parameter Tags -->
+                <div class="active-params-container" id="active-params-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Inspection Settings -->
+            <div class="form-group">
+                <label class="custom-checkbox-label">
+                    <input type="checkbox" id="catalogar-imagenes-checkbox" name="catalogar_imagenes" checked>
+                    <div class="checkbox-text">
+                        <strong>Inspección Profunda de Firmas, Sellos y Elementos Gráficos</strong>
+                        <small>Detección espacial morfológica de firmas autógrafas, sellos institucionales y códigos gráficos con coordenadas exactas.</small>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Action Button -->
+            <button type="submit" id="btn-submit-job" class="btn btn-primary btn-submit">
+                <span class="btn-spinner hidden" id="submit-spinner"></span>
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span id="submit-btn-text">Procesar Documento en Buzón</span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Live Status & Progress Panel -->
+    <div class="enterprise-card status-card hidden" id="live-progress-panel">
+        <div class="status-card-header">
+            <div class="status-title-group">
+                <span class="live-pulse"></span>
+                <h3 class="status-title">Triage y Procesamiento en Tiempo Real</h3>
+            </div>
+            <div class="elapsed-badge" id="elapsed-badge">0.00s</div>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progress-bar-fill" style="width: 5%;"></div>
+        </div>
+
+        <p class="progress-status-text" id="progress-status-text">Iniciando análisis del documento...</p>
+
+        <!-- Page Grid Live Status -->
+        <div class="page-grid-header">
+            <span>Páginas del Documento</span>
+            <span id="pages-processed-label">0 / 0</span>
+        </div>
+        <div class="pages-grid" id="pages-live-grid">
+            <!-- Page blocks dynamically populated via SSE -->
+        </div>
+
+        <div class="stream-terminal" id="stream-terminal">
+            <div class="terminal-line text-muted">&gt; Conexión con el orquestador SmartDoc establecida...</div>
+        </div>
+    </div>
+</section>
+{% endblock %}

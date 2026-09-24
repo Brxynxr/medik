@@ -1,0 +1,647 @@
+{
+  "pdf_hash": "53be2e66b6dd04a1975853f76fbeb1cb27db3d93b143dc0c61f9ea7218e36e90",
+  "pipeline_version": "2.2",
+  "status": "complete",
+  "nivel_cache": "none",
+  "duracion_total_ms": 2271.51,
+  "paginas_totales": 22,
+  "paginas_completadas": 22,
+  "paginas_pendientes": [],
+  "resultados_por_pagina": [
+    {
+      "numero_pagina": 1,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 3.24,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_001",
+          "page": 1,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p1_002",
+          "page": 1,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p1_003",
+          "page": 1,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 2,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 2.97,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p2_001",
+          "page": 2,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 2 Expediente No: EXP-2026-00208 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p2_002",
+          "page": 2,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 2 Expediente No: EXP-2026-00208 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p2_003",
+          "page": 2,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 2 Expediente No: EXP-2026-00208 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 3,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 5.79,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p3_001",
+          "page": 3,
+          "text": "PACIENTE: canino Max vacunado y desparasitado en",
+          "bbox": [
+            153.38,
+            469.25,
+            337.92,
+            482.99
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "PAGINA 3: REGISTRO VETERINARIO Y ANEXO VISUAL A continuacion se adjunta la fotografia del canino para el expediente de zoonosis: Observacion: Paciente canino Max vacunado y desparasitado en la clinica veterinaria."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 4,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 123.57,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 5,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 96.87,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 6,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 1.8,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p6_001",
+          "page": 6,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 6 Expediente No: EXP-2026-00624 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p6_002",
+          "page": 6,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 6 Expediente No: EXP-2026-00624 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p6_003",
+          "page": 6,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 6 Expediente No: EXP-2026-00624 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 7,
+      "tipo": "empty",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 1.05,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 8,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 124.77,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 9,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 2.85,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p9_001",
+          "page": 9,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 9 Expediente No: EXP-2026-00936 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p9_002",
+          "page": 9,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 9 Expediente No: EXP-2026-00936 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p9_003",
+          "page": 9,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 9 Expediente No: EXP-2026-00936 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 10,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 88.0,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 11,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 121.89,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 12,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 118.97,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 13,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 2.92,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p13_001",
+          "page": 13,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 13 Expediente No: EXP-2026-001352 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p13_002",
+          "page": 13,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 13 Expediente No: EXP-2026-001352 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p13_003",
+          "page": 13,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 13 Expediente No: EXP-2026-001352 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 14,
+      "tipo": "empty",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 0.35,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 15,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 119.36,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 16,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 129.82,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 17,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 1.88,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p17_001",
+          "page": 17,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 17 Expediente No: EXP-2026-001768 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p17_002",
+          "page": 17,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 17 Expediente No: EXP-2026-001768 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p17_003",
+          "page": 17,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 17 Expediente No: EXP-2026-001768 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 18,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 119.18,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 19,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 122.31,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 20,
+      "tipo": "empty",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 0.39,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": []
+    },
+    {
+      "numero_pagina": 21,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 1.67,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p21_001",
+          "page": 21,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 21 Expediente No: EXP-2026-002184 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p21_002",
+          "page": 21,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 21 Expediente No: EXP-2026-002184 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        },
+        {
+          "evidence_id": "ev_p21_003",
+          "page": 21,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 21 Expediente No: EXP-2026-002184 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ]
+    },
+    {
+      "numero_pagina": 22,
+      "tipo": "needs_ai",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 119.73,
+      "preprocesado": true,
+      "metadatos_visuales": [],
+      "evidencias": []
+    }
+  ],
+  "hallazgos": [
+    {
+      "parametro": "diagnostico",
+      "valor": "Evaluacion general de rutina",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_001",
+          "page": 1,
+          "text": "DIAGNOSTICO: Evaluacion general de rutina",
+          "bbox": [
+            110.52,
+            131.24,
+            296.99,
+            146.35
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ],
+      "valor_normalizado": "Evaluacion general de rutina",
+      "formato_detectado": "TEXT",
+      "tipo_entidad": "texto",
+      "divisa": null,
+      "kwic_context": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+    },
+    {
+      "parametro": "fecha",
+      "valor": "15/09/2026",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_002",
+          "page": 1,
+          "text": "FECHA: 15/09/2026",
+          "bbox": [
+            83.63,
+            98.74,
+            196.15,
+            113.86
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ],
+      "valor_normalizado": "2026-09-15",
+      "formato_detectado": "ISO-8601",
+      "tipo_entidad": "fecha",
+      "divisa": null,
+      "kwic_context": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+    },
+    {
+      "parametro": "paciente",
+      "valor": "10459283-A)",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_003",
+          "page": 1,
+          "text": "PACIENTE: 10459283-A)",
+          "bbox": [
+            98.92,
+            114.99,
+            334.91,
+            130.1
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+        }
+      ],
+      "valor_normalizado": "10459283.00",
+      "formato_detectado": "COP",
+      "tipo_entidad": "moneda",
+      "divisa": "COP",
+      "kwic_context": "REPORTE CLINICO HOSPITALARIO - PAGINA 1 Expediente No: EXP-2026-00104 Fecha de ingreso: 15/09/2026 Paciente: Juan Perez Alvarez (Identificacion: 10459283-A) Diagnostico principal: Evaluacion general de rutina con examenes de control."
+    }
+  ],
+  "telemetria": {
+    "hash_ms": 1.2,
+    "cache_ms": 0.8,
+    "fitz_ms": 168.81,
+    "classification_ms": 168.81,
+    "preprocess_ms": 1140.59,
+    "render_ms": 915.64,
+    "retrieval_ms": 36.47,
+    "gemini_ms": 0.0,
+    "merge_ms": 0.0,
+    "serialization_ms": 2.0,
+    "total_ms": 2271.51
+  },
+  "resumen_documento": "Expediente de 22 página(s) clasificado como HISTORIA_CLINICA con destino a Salud / Asistencia Médica.",
+  "departamento_sugerido": "Salud / Asistencia Médica",
+  "nombre_archivo_sugerido": "15092026_HISTORIA_CLINICA_53BE2E66.pdf"
+}

@@ -1,0 +1,51 @@
+# SmartDoc Engine — Minimalist & Professional Theme (shadcn/ui aesthetic)
+
+[theme]
+base = "light"
+primaryColor = "#0284C7"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F8FAFC"
+codeBackgroundColor = "#F1F5F9"
+textColor = "#0F172A"
+linkColor = "#0284C7"
+borderColor = "#E2E8F0"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "8px"
+buttonRadius = "8px"
+font = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+codeFontSize = "0.875rem"
+codeTextColor = "#0F172A"
+baseFontSize = 14
+baseFontWeight = 400
+headingFontSizes = ["32px", "26px", "22px", "18px", "15px", "13px"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+
+# Semantic Colors for Badges and Metrics
+grayColor = "#64748B"
+blueColor = "#0284C7"
+greenColor = "#16A34A"
+redColor = "#DC2626"
+yellowColor = "#CA8A04"
+orangeColor = "#EA580C"
+violetColor = "#7C3AED"
+
+dataframeBorderColor = "#E2E8F0"
+dataframeHeaderBackgroundColor = "#F8FAFC"
+
+[theme.sidebar]
+backgroundColor = "#F8FAFC"
+secondaryBackgroundColor = "#F1F5F9"
+codeBackgroundColor = "#E2E8F0"
+textColor = "#0F172A"
+borderColor = "#E2E8F0"
+primaryColor = "#0284C7"
+dataframeHeaderBackgroundColor = "#F1F5F9"
+dataframeBorderColor = "#E2E8F0"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true

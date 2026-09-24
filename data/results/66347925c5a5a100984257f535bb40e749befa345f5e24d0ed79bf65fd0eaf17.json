@@ -1,0 +1,205 @@
+{
+  "pdf_hash": "66347925c5a5a100984257f535bb40e749befa345f5e24d0ed79bf65fd0eaf17",
+  "pipeline_version": "2.2",
+  "status": "complete",
+  "nivel_cache": "none",
+  "duracion_total_ms": 35.97,
+  "paginas_totales": 1,
+  "paginas_completadas": 1,
+  "paginas_pendientes": [],
+  "resultados_por_pagina": [
+    {
+      "numero_pagina": 1,
+      "tipo": "local",
+      "exito": true,
+      "error": null,
+      "duracion_ms": 10.98,
+      "preprocesado": false,
+      "metadatos_visuales": [],
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_002",
+          "page": 1,
+          "text": "FACTURA: SETP-9921",
+          "bbox": [
+            135.58,
+            103.18,
+            192.44,
+            118.29
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        },
+        {
+          "evidence_id": "ev_p1_006",
+          "page": 1,
+          "text": "FECHA: 2026-09-21",
+          "bbox": [
+            77.51,
+            249.32,
+            173.06,
+            261.69
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        },
+        {
+          "evidence_id": "ev_p1_009",
+          "page": 1,
+          "text": "NIT: 901345678-9",
+          "bbox": [
+            70.78,
+            123.18,
+            182.05,
+            138.29
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        },
+        {
+          "evidence_id": "ev_p1_011",
+          "page": 1,
+          "text": "TOTAL: 4,850,000.00 COP",
+          "bbox": [
+            114.2,
+            143.18,
+            205.31,
+            158.29
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        }
+      ]
+    }
+  ],
+  "hallazgos": [
+    {
+      "parametro": "factura",
+      "valor": "SETP-9921",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_002",
+          "page": 1,
+          "text": "FACTURA: SETP-9921",
+          "bbox": [
+            135.58,
+            103.18,
+            192.44,
+            118.29
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        }
+      ],
+      "valor_normalizado": "9921.00",
+      "formato_detectado": "COP",
+      "tipo_entidad": "moneda",
+      "divisa": "COP",
+      "kwic_context": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+    },
+    {
+      "parametro": "fecha",
+      "valor": "2026-09-21",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_006",
+          "page": 1,
+          "text": "FECHA: 2026-09-21",
+          "bbox": [
+            77.51,
+            249.32,
+            173.06,
+            261.69
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        }
+      ],
+      "valor_normalizado": "2026-09-21",
+      "formato_detectado": "ISO-8601",
+      "tipo_entidad": "fecha",
+      "divisa": null,
+      "kwic_context": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+    },
+    {
+      "parametro": "nit",
+      "valor": "901345678-9",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_009",
+          "page": 1,
+          "text": "NIT: 901345678-9",
+          "bbox": [
+            70.78,
+            123.18,
+            182.05,
+            138.29
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        }
+      ],
+      "valor_normalizado": "901345678-9",
+      "formato_detectado": "NIT",
+      "tipo_entidad": "nit",
+      "divisa": "COP",
+      "kwic_context": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+    },
+    {
+      "parametro": "total",
+      "valor": "4,850,000.00 COP",
+      "confianza": 1.0,
+      "metodo": "spatial_vector",
+      "evidencias": [
+        {
+          "evidence_id": "ev_p1_011",
+          "page": 1,
+          "text": "TOTAL: 4,850,000.00 COP",
+          "bbox": [
+            114.2,
+            143.18,
+            205.31,
+            158.29
+          ],
+          "source": "spatial_vector",
+          "evidence_score": 1.0,
+          "kwic_snippet": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+        }
+      ],
+      "valor_normalizado": "4850000.00",
+      "formato_detectado": "COP",
+      "tipo_entidad": "moneda",
+      "divisa": "COP",
+      "kwic_context": "BUZÓN CORPORATIVO RIWI · COMPROBANTE FISCAL DIAN UBL 2.1 Tipo Documento: FACTURA Número Factura: SETP-9921 NIT / Emisor: 901345678-9 Monto Total: 4,850,000.00 COP Departamento: Tesorería / Cuentas por Pagar Nombre Sugerido: 20260921_FACTURA..."
+    }
+  ],
+  "telemetria": {
+    "hash_ms": 1.2,
+    "cache_ms": 0.8,
+    "fitz_ms": 10.98,
+    "classification_ms": 10.98,
+    "preprocess_ms": 0.0,
+    "render_ms": 0.0,
+    "retrieval_ms": 14.99,
+    "gemini_ms": 0.0,
+    "merge_ms": 0.0,
+    "serialization_ms": 2.0,
+    "total_ms": 35.97
+  },
+  "resumen_documento": "Expediente de 1 página(s) clasificado como FACTURA con destino a Contabilidad / Cuentas por Pagar.",
+  "departamento_sugerido": "Contabilidad / Cuentas por Pagar",
+  "nombre_archivo_sugerido": "20260921_FACTURA_9013456789.pdf"
+}
